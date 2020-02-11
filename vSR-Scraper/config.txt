@@ -1,0 +1,54 @@
+----------------------------------------------
+            telnet-server
+            profile "netconf"
+                netconf
+                    base-op-authorization
+                        kill-session
+                    exit
+                exit
+            exit
+            user "admin"
+                password "$2y$10$IdgA8P81jzL7caPn/EEYA.kF/KmVgIqC.et74idY/Ers2hD5Usm4q"
+                access console 
+                console
+                    member "administrative"
+                exit
+            exit
+            user "netconf"
+                password "$2y$10$Te4.uIlbrpZl6A6nqpLek.E8yub/sXCAyFuudvA5H/vUzsgvdsK0m"
+                access netconf 
+                console
+                    member "default"
+                    member "netconf"
+                    member "administrative"
+                exit
+            exit
+            snmp
+                community "ml8mqO5qCTo" hash2 mgmt version both
+                community "RausBttCVvU" hash2 rwa version both
+                community ".Uln5krPf7oQTrD4FJvmDE" hash2 rwa version both
+            exit
+            no per-peer-queuing
+            cpm-queue
+                queue 100 create
+                    rate 25000 cir 20000
+                exit
+                queue 101 create
+                    rate 25000 cir 20000
+                exit
+            exit
+            cpu-protection
+                link-specific-rate max
+                policy 254 create
+                exit
+                policy 255 create
+                exit
+                port-overall-rate 15000 
+            exit
+            cpm-filter
+                ip-filter
+                    no shutdown
+                exit
+            exit
+----------------------------------------------
+*A:R1-64502>config>system>security# 

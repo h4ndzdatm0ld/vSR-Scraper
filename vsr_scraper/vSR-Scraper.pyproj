@@ -23,6 +23,19 @@
   <ItemGroup>
     <Compile Include="vSR_Scraper.py" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="OG-Backups\" />
+    <Folder Include="Scrubbed Configs\" />
+    <Folder Include="Scrubbed Configs\R1-64502\" />
+    <Folder Include="Scrubbed Configs\SPFDILUP91A-P-AL-7750-01\" />
+    <Folder Include="Temp\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="OG-Backups\r1.log" />
+    <Content Include="OG-Backups\SPFDILUP91A-P-AL-7750-01 - ADC .log" />
+    <Content Include="Scrubbed Configs\R1-64502\R1-64502-Scrubbed.log" />
+    <Content Include="Scrubbed Configs\SPFDILUP91A-P-AL-7750-01\SPFDILUP91A-P-AL-7750-01-Scrubbed.log" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
        Visual Studio and specify your pre- and post-build commands in

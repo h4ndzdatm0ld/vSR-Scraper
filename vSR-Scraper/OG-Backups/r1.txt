@@ -1,0 +1,886 @@
+admin dip[1D [1Dspl[1D [1D[1D [1D[1D [1D[1D [1D[1D [1D[1D [1D[1D [1D[1D [1D[1D [1D[1D [1D[1D [1D/admin display-config
+# TiMOS-B-13.0.R10 both/i386 ALCATEL SR 7750 Copyright (c) 2000-2016 Alcatel-Lucent.
+# All rights reserved. All use subject to applicable license agreements.
+# Built on Wed Jun 22 19:54:37 PDT 2016 by builder in /rel13.0/b1/R10/panos/main
+
+# Generated WED FEB 19 06:37:19 2020 UTC
+
+exit all
+configure
+#--------------------------------------------------
+echo "System Configuration"
+#--------------------------------------------------
+    system
+        name "R1-64502"
+        contact " Ya momma!"
+        location "Portland"
+        chassis-mode c
+        dns
+        exit
+        netconf
+            no shutdown
+        exit
+        snmp
+            streaming
+                no shutdown
+            exit
+        exit
+        time
+            sntp
+                shutdown
+            exit
+            zone UTC
+        exit
+        thresholds
+            rmon
+            exit
+        exit
+    exit
+#--------------------------------------------------
+echo "System Security Configuration"
+#--------------------------------------------------
+    system
+        security
+            telnet-server
+            profile "netconf"
+                netconf
+                    base-op-authorization
+                        kill-session
+                    exit
+                exit
+            exit
+            user "netconf"
+                password "$2y$10$Te4.uIlbrpZl6A6nqpLek.E8yub/sXCAyFuudvA5H/vUzsgvdsK0m"
+                access netconf
+                console
+                    member "default"
+                    member "netconf"
+                    member "administrative"
+                exit
+            exit
+            snmp
+                community "ml8mqO5qCTo" hash2 mgmt version both
+                community "RausBttCVvU" hash2 rwa version both
+                community ".Uln5krPf7oQTrD4FJvmDE" hash2 rwa version both
+            exit
+            no per-peer-queuing
+            cpm-queue
+                queue 100 create
+                    rate 25000 cir 20000
+                exit
+                queue 101 create
+                    rate 25000 cir 20000
+                exit
+            exit
+            cpu-protection
+                link-specific-rate max
+                policy 254 create
+                exit
+                policy 255 create
+                exit
+                port-overall-rate 15000
+            exit
+        exit
+    exit
+#--------------------------------------------------
+echo "Log Configuration"
+#--------------------------------------------------
+    log
+        log-id 1
+            from debug-trace
+            no shutdown
+        exit
+    exit
+#--------------------------------------------------
+echo "System Security Cpm Hw Filters and PKI Configuration"
+#--------------------------------------------------
+    system
+        security
+            cpm-filter
+                ip-filter
+                    no shutdown
+                exit
+            exit
+        exit
+    exit
+#--------------------------------------------------
+echo "QoS Policy Configuration"
+#--------------------------------------------------
+    qos
+        queue-group-templates
+            ingress
+                queue-group "TCP80" create
+                exit
+            exit
+        exit
+    exit
+#--------------------------------------------------
+echo "Card Configuration"
+#--------------------------------------------------
+    card 1
+        card-type iom3-xp-b
+        mda 1
+            mda-type m5-1gb-sfp-b
+            no shutdown
+        exit
+        no shutdown
+    exit
+#--------------------------------------------------
+echo "Port Configuration"
+#--------------------------------------------------
+    port 1/1/1
+        ethernet
+            mtu 9212
+        exit
+        no shutdown
+    exit
+    port 1/1/2
+        ethernet
+            mtu 9212
+        exit
+        no shutdown
+    exit
+    port 1/1/3
+        ethernet
+            mode access
+            encap-type dot1q
+            mtu 9212
+        exit
+        no shutdown
+    exit
+    port 1/1/4
+        ethernet
+            encap-type dot1q
+            mtu 9212
+        exit
+        no shutdown
+    exit
+    port 1/1/5
+        ethernet
+            mode access
+            encap-type dot1q
+            mtu 9212
+        exit
+        no shutdown
+    exit
+#--------------------------------------------------
+echo "System Sync-If-Timing Configuration"
+#--------------------------------------------------
+    system
+        sync-if-timing
+            begin
+            commit
+        exit
+    exit
+#--------------------------------------------------
+echo "Management Router Configuration"
+#--------------------------------------------------
+    router management
+    exit
+
+#--------------------------------------------------
+echo "Router (Network Side) Configuration"
+#--------------------------------------------------
+    router Base
+        interface "TO-TEST"
+            no shutdown
+        exit
+        interface "TO_CE"
+            address 9.9.9.1/24
+            port 1/1/4:0
+            no shutdown
+        exit
+        interface "TO_R2"
+            address 10.1.2.1/24
+            port 1/1/1
+            no shutdown
+        exit
+        interface "TO_R3"
+            address 10.1.3.1/24
+            port 1/1/2
+            no shutdown
+        exit
+        interface "TO_TITTIES"
+            no shutdown
+        exit
+        interface "TO_XGS"
+            no shutdown
+        exit
+        interface "system"
+            address 10.10.10.10/32
+            no shutdown
+        exit
+        interface "test"
+            address 1.1.1.2/32
+            no shutdown
+        exit
+        interface "test2"
+            address 3.3.3.3/32
+            loopback
+            no shutdown
+        exit
+        interface "test444"
+            address 5.5.5.5/32
+            no shutdown
+        exit
+        autonomous-system 64500
+#--------------------------------------------------
+echo "Static Route Configuration"
+#--------------------------------------------------
+        static-route 0.0.0.0/0 next-hop 10.0.0.1
+#--------------------------------------------------
+echo "Aggregate Configuration"
+#--------------------------------------------------
+        aggregate 10.10.0.0/16 summary-only community 65000:200
+#--------------------------------------------------
+echo "OSPFv2 Configuration"
+#--------------------------------------------------
+        ospf 0
+            traffic-engineering
+            ldp-over-rsvp
+            area 0.0.0.0
+                interface "system"
+                    no shutdown
+                exit
+                interface "TO_R2"
+                    interface-type point-to-point
+                    no shutdown
+                exit
+                interface "TO_R3"
+                    interface-type point-to-point
+                    no shutdown
+                exit
+            exit
+            no shutdown
+        exit
+#--------------------------------------------------
+echo "ISIS Configuration"
+#--------------------------------------------------
+        isis 0
+            interface "TO-TEST"
+                level 2
+                    metric 666
+                exit
+                no shutdown
+            exit
+            interface "TO_R2"
+                level 2
+                    metric 90
+                exit
+                no shutdown
+            exit
+            interface "TO_TITTIES"
+                level 2
+                    metric 303030
+                exit
+                no shutdown
+            exit
+            interface "TO_XGS"
+                level-capability level-1
+                level 1
+                    metric 23
+                exit
+                no shutdown
+            exit
+            interface "test"
+                level 2
+                    metric 230
+                exit
+                no shutdown
+            exit
+            no shutdown
+        exit
+#--------------------------------------------------
+echo "MPLS Configuration"
+#--------------------------------------------------
+        mpls
+            interface "system"
+                no shutdown
+            exit
+            interface "TO_R2"
+                te-metric 100
+                no shutdown
+            exit
+            interface "TO_R3"
+                te-metric 6969
+                no shutdown
+            exit
+        exit
+#--------------------------------------------------
+echo "RSVP Configuration"
+#--------------------------------------------------
+        rsvp
+            interface "system"
+                no shutdown
+            exit
+            interface "TO_R2"
+                no shutdown
+            exit
+            interface "TO_R3"
+                no shutdown
+            exit
+            no shutdown
+        exit
+#--------------------------------------------------
+echo "MPLS LSP Configuration"
+#--------------------------------------------------
+        mpls
+            path "loose"
+                no shutdown
+            exit
+            path "LAST_RESORT"
+                shutdown
+            exit
+            path "HOPLESS_PATH"
+                shutdown
+            exit
+            lsp-template "Full-Mesh" mesh-p2p
+                default-path "loose"
+                cspf use-te-metric
+                fast-reroute facility
+                exit
+                no shutdown
+            exit
+            lsp "TO_TEST"
+                shutdown
+            exit
+            lsp "TO_DEATH"
+                to 1.1.1.1
+                primary "HOPLESS_PATH"
+                exit
+                secondary "LAST_RESORT"
+                exit
+                no shutdown
+            exit
+            auto-lsp lsp-template "Full-Mesh" policy "Remote-PEz"
+            no shutdown
+        exit
+#--------------------------------------------------
+echo "LDP Configuration"
+#--------------------------------------------------
+        ldp
+            interface-parameters
+            exit
+            targeted-session
+                peer-template "TLDP-Mesh"
+                    tunneling
+                    no shutdown
+                exit
+                peer-template-map peer-template "TLDP-Mesh" policy "Remote-PEz"
+            exit
+            no shutdown
+        exit
+#--------------------------------------------------
+echo "Web Portal Protocol Configuration"
+#--------------------------------------------------
+    exit
+
+#--------------------------------------------------
+echo "Service Configuration"
+#--------------------------------------------------
+    service
+        sdp 999 mpls create
+            shutdown
+            far-end 1.1.1.1
+            lsp "TO_DEATH"
+            keep-alive
+                shutdown
+            exit
+        exit
+        customer 1 create
+            description "Default customer"
+        exit
+        customer 200 create
+            description "LS Networks"
+        exit
+        customer 1000 create
+            description "LS Networks"
+        exit
+        pw-template 2 create
+            hash-label
+            split-horizon-group "vpls-shg"
+            exit
+        exit
+        vprn 18 customer 1 create
+            interface "test" create
+            exit
+        exit
+        vprn 100 customer 1 create
+            dhcp
+                local-dhcp-server "isc" create
+                exit
+            exit
+        exit
+        vprn 200 customer 1 create
+        exit
+        ies 301 customer 1 create
+            interface "L3_NODE_MGMT" create
+            exit
+        exit
+        vprn 400 customer 1 create
+            interface "TO_CE5" create
+            exit
+            interface "test" create
+            exit
+            interface "TO_MGMT" create
+            exit
+        exit
+        vprn 1000 customer 1000 create
+        exit
+        vprn 18 customer 1 create
+            autonomous-system 65000
+            auto-bind-tunnel
+                resolution any
+            exit
+            interface "test" create
+            exit
+            no shutdown
+        exit
+        vpls 99 customer 1 create
+            shutdown
+            description "TEST"
+            allow-ip-int-bind
+            exit
+            stp
+                shutdown
+            exit
+        exit
+        vprn 100 customer 1 create
+            snmp
+                access
+            exit
+            autonomous-system 64500
+            route-distinguisher 64500:100
+            auto-bind-tunnel
+                resolution any
+            exit
+            vrf-target target:64500:100
+            no shutdown
+        exit
+        vprn 200 customer 1 create
+            autonomous-system 64496
+            route-distinguisher 64496:200
+            auto-bind-tunnel
+                resolution any
+            exit
+            vrf-target target:64496:200
+            no shutdown
+        exit
+        vpls 300 customer 1 create
+            service-mtu 9100
+            allow-ip-int-bind
+            exit
+            bgp
+                route-distinguisher 64500:300
+                route-target export target:64500:300 import target:64500:300
+                pw-template-binding 2 split-horizon-group "vpls-shg" import-rt "target:64500:300"
+                exit
+            exit
+            bgp-ad
+                vpls-id 64500:300
+                vsi-id
+                    prefix 10.10.10.10
+                exit
+                no shutdown
+            exit
+            stp
+                shutdown
+            exit
+            service-name "NODE_L2_MGMT"
+            sap 1/1/3:300 create
+            exit
+            no shutdown
+        exit
+        ies 301 customer 1 create
+            interface "L3_NODE_MGMT" create
+                address 10.0.0.230/24
+                vpls "NODE_L2_MGMT"
+                exit
+            exit
+            no shutdown
+        exit
+        vprn 400 customer 1 create
+            maximum-routes 20 threshold 50
+            snmp
+                community "3yekwJT5Ov/paEiOTxGQV." hash2 rw version both
+                community "2gmxi40gH96" hash2 rw version both
+                access
+            exit
+            autonomous-system 64500
+            route-distinguisher 64500:400
+            auto-bind-tunnel
+                resolution-filter
+                    rsvp
+                exit
+                resolution any
+            exit
+            vrf-target target:64500:400
+            interface "TO_CE5" create
+                address 192.168.5.1/24
+                sap 1/1/5:400 create
+                exit
+            exit
+            interface "test" create
+                address 2.2.2.1/24
+                sap 1/1/5:2 create
+                exit
+            exit
+            interface "TO_MGMT" create
+                shutdown
+                address 10.0.0.181/24
+            exit
+            bgp
+                backup-path ipv4 ipv6
+                best-path-selection
+                    always-compare-med
+                exit
+                next-hop-resolution
+                exit
+                group "AS64496"
+                    as-override
+                    export "EXP-ALL-400"
+                    neighbor 2.2.2.5
+                        peer-as 64496
+                    exit
+                    neighbor 192.168.5.5
+                        peer-as 64496
+                    exit
+                exit
+                no shutdown
+            exit
+            no shutdown
+        exit
+        vprn 1000 customer 1000 create
+            description "LABCR81"
+            vrf-export "ROUTE-EXPORT-1000"
+            autonomous-system 25899
+            route-distinguisher 25899:1000
+            auto-bind-tunnel
+                resolution-filter
+                    rsvp
+                exit
+                resolution any
+            exit
+            vrf-target target:25899:1000
+            static-route 0.0.0.0/0 black-hole community 25899:999
+            static-route 192.0.2.1/32 black-hole community 25899:999
+            static-route ::/0 black-hole community 25899:999
+            aggregate 67.59.64.0/19 community 25899:501 aggregator 25899:10.0.0.230
+            aggregate 67.210.192.0/20 community 25899:501 aggregator 25899:10.0.0.230
+            aggregate 69.1.96.0/19 community 25899:500 aggregator 25899:10.0.0.230
+            aggregate 69.1.110.0/24 community 25899:500 aggregator 25899:10.0.0.230
+            aggregate 98.142.32.0/20 community 25899:500 aggregator 25899:10.0.0.230
+            aggregate 98.142.46.0/24 community 25899:500 aggregator 25899:10.0.0.230
+            aggregate 162.255.40.0/22 community 25899:500 aggregator 25899:10.0.0.230
+            aggregate 192.95.68.0/22 community 25899:500 aggregator 25899:10.0.0.230
+            aggregate 198.237.192.0/22 community 25899:500 aggregator 25899:10.0.0.230
+            aggregate 199.91.224.0/21 community 25899:500 aggregator 25899:10.0.0.230
+            aggregate 199.182.200.0/22 community 25899:500 aggregator 25899:10.0.0.230
+            aggregate 199.193.232.0/21 community 25899:500 aggregator 25899:10.0.0.230
+            aggregate 206.192.224.0/19 community 25899:500 aggregator 25899:10.0.0.230
+            aggregate 208.70.169.0/24 community 25899:500 aggregator 25899:10.0.0.230
+            aggregate 209.237.64.0/19 community 25899:500 aggregator 25899:10.0.0.230
+            aggregate 216.110.192.0/19 community 25899:500 aggregator 25899:10.0.0.230
+            aggregate 216.110.192.0/24 community 25899:500 aggregator 25899:10.0.0.230
+            aggregate 2607:400::/32 community 25899:551 aggregator 25899:10.0.0.230
+            aggregate 2607:fa40::/32 community 25899:550 aggregator 25899:10.0.0.230
+            aggregate 2620:3e::/48 community 25899:500 aggregator 25899:10.0.0.230
+            bgp
+                graceful-restart
+                exit
+                router-id 10.0.0.230
+                rapid-withdrawal
+                next-hop-resolution
+                exit
+                group "CUST-ADV-LSN-ONLY"
+                    description "Customer facing peer-group, advertising LSN prefixes only"
+                    family ipv4 ipv6
+                    prefix-limit ipv4 50 threshold 75
+                    prefix-limit ipv6 50 threshold 75
+                    type external
+                    remove-private
+                    import "NO-ROUTES"
+                    export "ANC-LSNONLY-CUST"
+                    graceful-restart
+                    exit
+                exit
+                group "CUST-ADV-DEFAULT-ONLY"
+                    description "Customer facing, only advertise default route"
+                    family ipv4 ipv6
+                    prefix-limit ipv4 50 threshold 75
+                    prefix-limit ipv6 50 threshold 75
+                    type external
+                    remove-private
+                    import "NO-ROUTES"
+                    export "DEFAULT-ONLY"
+                    graceful-restart
+                    exit
+                exit
+                group "CUST-ADV-FULL-DEFAULT"
+                    description "Customer facing, advertise full routing table with a default route"
+                    family ipv4 ipv6
+                    prefix-limit ipv4 50 threshold 75
+                    prefix-limit ipv6 50 threshold 75
+                    type external
+                    remove-private
+                    import "NO-ROUTES"
+                    export "ANC-FULL-CUST-D"
+                    graceful-restart
+                    exit
+                exit
+                group "CUST-ADV-FULL-NO-DEFAULT"
+                    description "Customer facing peer-group, advertising full route without default route"
+                    family ipv4 ipv6
+                    prefix-limit ipv4 50 threshold 75
+                    prefix-limit ipv6 50 threshold 75
+                    type external
+                    remove-private
+                    import "NO-ROUTES"
+                    export "ANC-FULL-CUST-ND"
+                    graceful-restart
+                    exit
+                exit
+                group "CUST-ADV-PARTIAL-DEFAULT"
+                    description "Customer facing peer-group, advertising LSN + customer prefixes with default"
+                    family ipv4 ipv6
+                    prefix-limit ipv4 50 threshold 75
+                    prefix-limit ipv6 50 threshold 75
+                    type external
+                    remove-private
+                    import "NO-ROUTES"
+                    export "ANC-PARTIAL-CUST-D"
+                    graceful-restart
+                    exit
+                exit
+                group "CUST-ADV-PARTIAL-NO-DEFAULT"
+                    description "Customer facing peer-group, advertising LSN + customer prefixes without default"
+                    family ipv4 ipv6
+                    prefix-limit ipv4 50 threshold 75
+                    prefix-limit ipv6 50 threshold 75
+                    type external
+                    remove-private
+                    import "NO-ROUTES"
+                    export "ANC-PARTIAL-CUST-ND"
+                    graceful-restart
+                    exit
+                exit
+                no shutdown
+            exit
+            no shutdown
+        exit
+        vpls 99 customer 1 create
+            allow-ip-int-bind
+            exit
+        exit
+        vpls 300 customer 1 create
+            allow-ip-int-bind
+            exit
+        exit
+    exit
+#--------------------------------------------------
+echo "CPM Filter Router and Svc-id Match Configuration"
+#--------------------------------------------------
+    system
+        security
+            cpm-filter
+                ip-filter
+                    no shutdown
+                exit
+            exit
+        exit
+    exit
+#--------------------------------------------------
+echo "Router (Service Side) Configuration"
+#--------------------------------------------------
+    router Base
+#--------------------------------------------------
+echo "OSPFv2 Configuration"
+#--------------------------------------------------
+        ospf 0
+            no shutdown
+        exit
+#--------------------------------------------------
+echo "ISIS Configuration"
+#--------------------------------------------------
+        isis 0
+            no shutdown
+        exit
+#--------------------------------------------------
+echo "Policy Configuration"
+#--------------------------------------------------
+        policy-options
+            begin
+            prefix-list "PL-MOFCU"
+                prefix 67.59.69.160/28 exact
+            exit
+            prefix-list "System-IPz"
+                prefix 10.10.10.0/24 prefix-length-range 32-32
+            exit
+            policy-statement "Remote-PEz"
+                entry 10
+                    from
+                        prefix-list "System-IPz"
+                    exit
+                    action accept
+                    exit
+                exit
+            exit
+            commit
+        exit
+#--------------------------------------------------
+echo "BGP Configuration"
+#--------------------------------------------------
+        bgp
+            router-id 10.10.10.10
+            rapid-update l2-vpn
+            next-hop-resolution
+                shortcut-tunnel
+                    family ipv4
+                        resolution-filter
+                            rsvp
+                        exit
+                        resolution filter
+                    exit
+                exit
+            exit
+            group "mp-BGP"
+                family vpn-ipv4 l2-vpn
+                peer-as 64500
+                neighbor 10.10.10.20
+                exit
+                neighbor 10.10.10.30
+                exit
+                neighbor 10.10.10.40
+                exit
+            exit
+            no shutdown
+        exit
+    exit
+
+#--------------------------------------------------
+echo "Local DHCP Server (Services) Configuration"
+#--------------------------------------------------
+    service
+        vprn 100 customer 1 create
+            dhcp
+                local-dhcp-server "isc" create
+                    shutdown
+                exit
+            exit
+        exit
+    exit
+
+exit all
+
+# Finished WED FEB 19 06:37:20 2020 UTC
+*A:R1-64502>config>port>ethernet>ssm# show service sap-using sap 1/1/43
+
+===============================================================================
+Service Access Points
+===============================================================================
+PortId                          SvcId      Ing.  Ing.    Egr.  Egr.   Adm  Opr
+                                           QoS   Fltr    QoS   Fltr
+-------------------------------------------------------------------------------
+No Matching Entries
+===============================================================================
+*A:R1-64502>config>port>ethernet>ssm#
+*A:R1-64502>config>port>ethernet>ssm# confsys
+                                      ^
+Error: Bad command.
+*A:R1-64502>config>port>ethernet>ssm# info
+----------------------------------------------
+----------------------------------------------
+*A:R1-64502>config>port>ethernet>ssm# /configure system
+*A:R1-64502>config>system# info
+----------------------------------------------
+#--------------------------------------------------
+echo "System Configuration"
+#--------------------------------------------------
+        name "R1-64502"
+        contact " Ya momma!"
+        location "Portland"
+        chassis-mode c
+        dns
+        exit
+        netconf
+            no shutdown
+        exit
+        snmp
+            streaming
+                no shutdown
+            exit
+        exit
+        time
+            sntp
+                shutdown
+            exit
+            zone UTC
+        exit
+        thresholds
+            rmon
+            exit
+        exit
+#--------------------------------------------------
+echo "System Security Configuration"
+#--------------------------------------------------
+        security
+            telnet-server
+            profile "netconf"
+                netconf
+                    base-op-authorization
+                        kill-session
+                    exit
+                exit
+            exit
+            user "netconf"
+                password "$2y$10$Te4.uIlbrpZl6A6nqpLek.E8yub/sXCAyFuudvA5H/vUzsgvdsK0m"
+                access netconf
+                console
+                    member "default"
+                    member "netconf"
+                    member "administrative"
+                exit
+            exit
+            snmp
+                community "ml8mqO5qCTo" hash2 mgmt version both
+                community "RausBttCVvU" hash2 rwa version both
+                community ".Uln5krPf7oQTrD4FJvmDE" hash2 rwa version both
+            exit
+            no per-peer-queuing
+            cpm-queue
+                queue 100 create
+                    rate 25000 cir 20000
+                exit
+                queue 101 create
+                    rate 25000 cir 20000
+                exit
+            exit
+            cpu-protection
+                link-specific-rate max
+                policy 254 create
+                exit
+                policy 255 create
+                exit
+                port-overall-rate 15000
+            exit
+        exit
+#--------------------------------------------------
+echo "System Security Cpm Hw Filters and PKI Configuration"
+#--------------------------------------------------
+        security
+            cpm-filter
+                ip-filter
+                    no shutdown
+                exit
+            exit
+        exit
+----------------------------------------------
+*A:R1-64502>config>system# This terminal has been idle for 15 minutes
+It will be logged out if it remains idle for another 15 minutes
+*A:R1-64502>config>system# Log out by the system
+TiMOS-B-13.0.R10 both/i386 ALCATEL SR 7750 Copyright (c) 2000-2016 Alcatel-Lucent.
+All rights reserved. All use subject to applicable license agreements.
+Built on Wed Jun 22 19:54:37 PDT 2016 by builder in /rel13.0/b1/R10/panos/main
+
+
+Login:

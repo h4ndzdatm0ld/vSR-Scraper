@@ -14,15 +14,13 @@ import os
 import shutil
 import glob
 import sys
-# Pending items :
-##
-
+# Pending items:
 
 # Regex patterns utilized to scrub the configuration files
-
 ADMIN_PW = re.compile(r'^.*password.*$', re.MULTILINE)
 DISP_CONF = re.compile(r'^.*admin di.+$', re.MULTILINE)
-SOT_LINES = re.compile(r'^.*Generated\s\w+\s\w+\s+\d+\s\d+.\d+.\d+\s\d+\s\w+', re.DOTALL)
+SOT_LINES = re.compile(r'^.*Generated\s\w+\s\w+\s+\d+\s\d+.\d+.\d+\s\d+\s\w+',\
+    re.DOTALL)
 EOT_LINES = re.compile(r'Finished.*', re.MULTILINE | re.DOTALL)
 MGMT_RTZ = re.compile\
     (r'^.*static\D\w+\D\w+\s\d+.\d+.\d+.\d+\D\d+\s+next-hop\s\d+.\d+.\d+.\d+\s+exit\s+exit', \
@@ -33,8 +31,9 @@ SYS_NAME = re.compile(r'((?<=system\s........name\s)(.*))')
 # Capture the CWD as a variable.
 CURRENT_PATH = os.getcwd()
 
-# The log session must be pulled from the session by File > Log Session
-# If the 'raw log' is used, the text spacing will be off and errors will occur.
+# The log session must be pulled from the SecureCRT session using
+# File > Log Session -- If the 'raw log' is used, the text spacing
+# will be off and errors will occur.
 
 # Display all .log files in the current working directory.
 # If there are more than two .log files, the program will not run.
@@ -46,19 +45,6 @@ for y in glob.glob("*.log"):
         sys.exit("Err.. found too many Log files in the CWD - \
             Ensure only one is present & try again.")
 
-# Create a backup of the original file before doing anything.
-try:
-    SRC_FILE = file
-    DST_FLD = 'OG-Backups'
-    shutil.copy2(SRC_FILE, DST_FLD)
-
-except FileNotFoundError:
-    print("Error: Is the file name incorrect? Can't find a config file to scrub.")
-
-# The first function runs the regex searches line by line, in order to
-# eliminate syntax + empty lines within the configuration file that are
-# left beind.
-
 def create_folder(directory):
     try:
         if not os.path.exists(directory):
@@ -66,7 +52,21 @@ def create_folder(directory):
     except OSError:
         print('Error: Creating directory. ' +  directory)
 
+# These folders will be auto-generated to allow the program to handle all the
+# files that will be created, backed up, etc. These do not get overwritten
+# after initial creation.
+create_folder('Scrubbed Configs')
+create_folder('Temp')
+create_folder('Backup Configs')
 
+# Create a backup of the original file before doing anything.
+SRC_FILE = file
+DST_FLD = 'Backup Configs'
+shutil.copy2(SRC_FILE, DST_FLD)
+
+# The first function runs the regex searches line by line, in order to
+# eliminate syntax + empty lines within the configuration file that are
+# left beind.
 def line_text():
     with open(file, 'r+', encoding='utf-8') as f_rd:
         scrape = []
@@ -84,9 +84,8 @@ def line_text():
         x_new.close()
         time.sleep(5) # Some config files are quite large, assert enough time.
 
-# The second function searches all text, without being bound to a line by line
-# reading, as opposed to the first function.
-
+# The second function searches all text, without being bound to reading line by
+# line, as opposed to the first function.
 def reg_text():
     file = "scrubbed.log"
     with open(file, 'r+', encoding='utf-8') as f_rd:

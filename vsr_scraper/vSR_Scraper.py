@@ -15,6 +15,7 @@ import shutil
 import glob
 import sys
 # Pending items:
+#   - Remove the os module and only use shutil
 
 # Regex patterns utilized to scrub the configuration files
 ADMIN_PW = re.compile(r'^.*password.*$', re.MULTILINE)
@@ -31,7 +32,7 @@ SYS_NAME = re.compile(r'((?<=system\s........name\s)(.*))')
 # Capture the CWD as a variable.
 CURRENT_PATH = os.getcwd()
 
-# The log session must be pulled from the SecureCRT session using
+# The log file must be pulled from the SecureCRT session using
 # File > Log Session -- If the 'raw log' is used, the text spacing
 # will be off and errors will occur.
 
@@ -43,7 +44,7 @@ for y in glob.glob("*.log"):
     print("Found a log file! Using:", file)
     if len(glob.glob("*.log")) > 1:
         sys.exit("Err.. found too many Log files in the CWD - \
-            Ensure only one is present & try again.")
+Ensure only one is present & try again.")
 
 def create_folder(directory):
     try:
@@ -52,17 +53,31 @@ def create_folder(directory):
     except OSError:
         print('Error: Creating directory. ' +  directory)
 
+def clean_slate():
+# This additional function is used to wipe the latest scrubbed configuration at
+# the time of running this program and allow this folder to only keep the active
+# file stored within the Scrubbed Configs/Latest directory. Ansible will pull
+# this log file and finish FTP it to the Jump Server.
+    try:
+        os.chdir('Scrubbed Configs')
+        shutil.rmtree('Latest')
+    except FileNotFoundError:
+        print("Latest Folder not present. Is this first boot?")
+
 # These folders will be auto-generated to allow the program to handle all the
 # files that will be created, backed up, etc. These do not get overwritten
 # after initial creation.
-create_folder('Scrubbed Configs')
-create_folder('Temp')
-create_folder('Backup Configs')
+def dir_setup():
+    os.chdir(CURRENT_PATH)
+    create_folder('Scrubbed Configs')
+    create_folder('Scrubbed Configs/Latest')
+    create_folder('Temp')
+    create_folder('Backup Configs')
 
-# Create a backup of the original file before doing anything.
-SRC_FILE = file
-DST_FLD = 'Backup Configs'
-shutil.copy2(SRC_FILE, DST_FLD)
+    # Create a backup of the original file before doing anything.
+    SRC_FILE = file
+    DST_FLD = 'Backup Configs'
+    shutil.copy2(SRC_FILE, DST_FLD)
 
 # The first function runs the regex searches line by line, in order to
 # eliminate syntax + empty lines within the configuration file that are
@@ -146,6 +161,12 @@ def reg_text():
             x = open(system +'-Scrubbed.log', 'w')
             x.write(d)
             x.close()
+            for y in glob.glob("*.log"):
+                file = (y)
+                print("Copying the latest generated file to 'Scrubbed Configs/Latest'", file)
+            SRC_FILE = file
+            DST_FLD = CURRENT_PATH +'/Scrubbed Configs/Latest'
+            shutil.copy2(SRC_FILE, DST_FLD)
         except UnboundLocalError:
             print("Err.. regex failed to find system name - error occured earlier.")
 
@@ -155,7 +176,11 @@ def reg_text():
             print("The vSR-Scraper directory lives at %s" % CURRENT_PATH)
         except UnboundLocalError:
             print("Err.. regex failed to find system name - error occured earlier.")
+
 def main():
+    clean_slate()
+    dir_setup()
     line_text()
     reg_text()
+
 if __name__ == "__main__": main()

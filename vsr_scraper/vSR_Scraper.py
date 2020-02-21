@@ -59,7 +59,7 @@ def clean_slate():
 # file stored within the Scrubbed Configs/Latest directory. Ansible will pull
 # this log file and finish FTP it to the Jump Server.
     try:
-        os.chdir('Scrubbed Configs')
+        os.chdir('Scrubbed-Configs')
         shutil.rmtree('Latest')
     except FileNotFoundError:
         print("Latest Folder not present. Is this first boot?")
@@ -69,10 +69,10 @@ def clean_slate():
 # after initial creation.
 def dir_setup():
     os.chdir(CURRENT_PATH)
-    create_folder('Scrubbed Configs')
-    create_folder('Scrubbed Configs/Latest')
+    create_folder('Scrubbed-Configs')
+    create_folder('Scrubbed-Configs/Latest')
     create_folder('Temp')
-    create_folder('Backup Configs')
+    create_folder('Backup-Configs')
 
     # Create a backup of the original file before doing anything.
     SRC_FILE = file
@@ -143,7 +143,7 @@ def reg_text():
         os.remove("scrubbed.log")
 
         # Back to home dir + scrubbed config for final product
-        os.chdir(CURRENT_PATH +'/Scrubbed Configs')
+        os.chdir(CURRENT_PATH +'/Scrubbed-Configs')
 
         # Utilize the createfolder function to create a folder by sys name.
         try:
@@ -163,9 +163,9 @@ def reg_text():
             x.close()
             for y in glob.glob("*.log"):
                 file = (y)
-                print("Copying the latest generated file to 'Scrubbed Configs/Latest'", file)
+                print("Copying the latest generated file to 'Scrubbed-Configs/Latest'", file)
             SRC_FILE = file
-            DST_FLD = CURRENT_PATH +'/Scrubbed Configs/Latest'
+            DST_FLD = CURRENT_PATH +'/Scrubbed-Configs/Latest'
             shutil.copy2(SRC_FILE, DST_FLD)
         except UnboundLocalError:
             print("Err.. regex failed to find system name - error occured earlier.")

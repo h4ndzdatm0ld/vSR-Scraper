@@ -76,7 +76,7 @@ def dir_setup():
 
     # Create a backup of the original file before doing anything.
     SRC_FILE = file
-    DST_FLD = 'Backup Configs'
+    DST_FLD = 'Backup-Configs'
     shutil.copy2(SRC_FILE, DST_FLD)
 
 # The first function runs the regex searches line by line, in order to

@@ -2,10 +2,8 @@
 
 ##################################################################
 # Author: Hugo Tinoco :: hugo.tinoco.ext@nokia.com
-# Version 0.1 (Beta) - 2/12/2020  - Created foundation.
-# Version 0.2 (Beta) - 2/18/2020  - Re-strucuted. Auto find logs
-#  - Error Handling. File/directory handling.
-# Ver 0.3 (Beta) - 2/19/2020 - Ran pylint cleaned up code. ###
+# Beta Ver .04
+# 
 ##################################################################
 
 import time
@@ -14,8 +12,22 @@ import os
 import shutil
 import glob
 import sys
+import os
+import logging
+from netmiko import Netmiko
+from getpass import getpass
+from ftplib import FTP
+
 # Pending items:
-#   - Remove the os module and only use shutil
+#   Update crendentials for jumpserver
+
+# Fill out the following credentials for the Jump Server | Leave the qoutes. 
+# Including the IP Address of the JumpServer.
+FTPuser = "root"
+FTPpasswd = "root"
+JumpServer = "10.0.0.182"   
+TestVsr = "10.0.0.240"
+
 
 # Regex patterns utilized to scrub the configuration files
 ADMIN_PW = re.compile(r'^.*password.*$', re.MULTILINE)
@@ -28,6 +40,12 @@ MGMT_RTZ = re.compile\
     re.MULTILINE)
 SFM = re.compile(r'^.*sfm\s\d\s+sfm.*\s+\w.*\s+.*', re.MULTILINE)
 SYS_NAME = re.compile(r'((?<=system\s........name\s)(.*))')
+
+# Netmiko Logging - This creates a Log file (NetmikoLog.txt) in CWD. Does not overwrite (a+).
+# Log must end in .txt file as the program won't allow two .log files in the CWD.
+open("NetmikoLog.txt", "a+")
+logging.basicConfig(filename="NetmikoLog.txt", level=logging.DEBUG)
+logger = logging.getLogger("netmiko")
 
 # Capture the CWD as a variable.
 CURRENT_PATH = os.getcwd()
@@ -177,10 +195,108 @@ def reg_text():
         except UnboundLocalError:
             print("Err.. regex failed to find system name - error occured earlier.")
 
+def prep_jumpserver():
+    
+    # Running the local script ./cleandir which places any file in the dir into the Archive directory.
+
+    jumpserver = {
+        "host": JumpServer,
+        "username": "root",
+        "password": "root",
+        "device_type": "linux",
+    }
+
+    net_connect = Netmiko(**jumpserver)
+    
+    print("Cleaning /vzw directory before FTP'ing new files.")
+
+    # Change to the correct directory.
+    net_connect.send_command("cd /var/ftp/pub/vzw", expect_string=r'#')
+
+    # Execute the script.
+    cleandir = net_connect.send_command("./cleandir")
+    
+    # Print the output.
+    print(cleandir) 
+    
+    # Disconnect
+    net_connect.disconnect()
+
+
+def place_file():
+
+    #os.chdir(CURRENT_PATH +'/Scrubbed-Configs/Latest')
+    ftp = FTP(JumpServer)
+    #print ("Welcome: ", ftp.getwelcome())
+
+    ftp.login(FTPuser,FTPpasswd)
+
+    # Change to the correct directory. 
+    ftp.cwd('/var/ftp/pub/vzw') 
+
+    # Utilize glob to the find the file by extension. This is currently looking for the only file under (CURRENT_PATH +'/Scrubbed-Configs/Latest')
+    for y in glob.glob("*.log"):
+        global ftp_file
+        ftp_file = (y)
+
+    # Execute FTP
+    ftp.storbinary('STOR '+ftp_file, open(ftp_file, 'rb'))
+
+    # Inform user the file has been put.
+    print("Placed File on JumpServer.")
+
+    # Print the contents to screen.
+    dirlist = ftp.retrlines('LIST')
+
+    # Quit.
+    ftp.quit()
+
+def prep_file():
+
+    jumpserver = {
+        "host": JumpServer,
+        "username": "root",
+        "password": "root",
+        "device_type": "linux",
+    }
+
+    net_connect = Netmiko(**jumpserver)
+    
+    # Change to the correct directory.
+    net_connect.send_command("cd /var/ftp/pub/vzw", expect_string=r'#')
+
+    #print(net_connect.find_prompt())
+  
+    ## Checking BOM and remove if found, otherwise move on. 
+    print("Checking BOM..") 
+
+    # if statement = if BOM detected, run the clean | set no bomb command.  Otherwise, continue.
+    chkBom = net_connect.send_command('file /var/ftp/pub/vzw'+ ftp_file) 
+    if 'BOM' in chkBom:
+        print ("Disabling BOMB")
+        net_connect.send_command("vim --clean -c 'se nobomb|wq' /srv/ftp/"+ ftp_file)
+    if 'BOM' not in chkBom:
+        print("No BOMB Detonating needed today.")
+
+    # Run the local makesim script against the newly updated file.
+    makesim = net_connect.send_command('./makesim '+ ftp_file) 
+    print (makesim)
+
+    # Print contents of PWD to screen.
+    output = net_connect.send_command('ls -l')
+    print(output)
+
+    # Goodbye
+    net_connect.disconnect()
+
+
 def main():
     clean_slate()
     dir_setup()
     line_text()
     reg_text()
+    prep_jumpserver()
+    place_file()
+    prep_file()
 
 if __name__ == "__main__": main()

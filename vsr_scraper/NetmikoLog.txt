@@ -1,0 +1,2092 @@
+DEBUG:paramiko.transport:starting thread (client mode): 0xe5d8bc88
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.7.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-OpenSSH_8.0p1 Ubuntu-6build1
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_8.0p1)
+DEBUG:paramiko.transport:kex algos:['curve25519-sha256', 'curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group16-sha512', 'diffie-hellman-group18-sha512', 'diffie-hellman-group14-sha256', 'diffie-hellman-group14-sha1'] server key:['rsa-sha2-512', 'rsa-sha2-256', 'ssh-rsa', 'ecdsa-sha2-nistp256', 'ssh-ed25519'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: curve25519-sha256@libssh.org
+DEBUG:paramiko.transport:HostKey agreed: ssh-ed25519
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:kex engine KexCurve25519 specified hash_algo <built-in function openssl_sha256>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-ed25519 host key for 10.0.0.182: b'ffb19df005ec7aad77b1737a16a4a5b6'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:Received global request "hostkeys-00@openssh.com"
+DEBUG:paramiko.transport:Rejecting "hostkeys-00@openssh.com" global request from server.
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:read_channel: Welcome to Ubuntu 19.10 (GNU/Linux 5.3.0-40-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Thu 12 Mar 2020 04:30:06 AM UTC
+
+  System load:  0.0                Processes:            245
+  Usage of /:   35.2% of 19.56GB   Users logged in:      1
+  Memory usage: 9%                 IP address for ens33: 10.0.0.182
+  Swap usage:   0%
+
+ * Latest Kubernetes 1.18 beta is now available for your laptop, NUC, cloud
+   instance or Raspberry Pi, with automatic updates to the final GA release.
+
+     sudo snap install microk8s --channel=1.18/beta --classic
+
+ * Multipass 1.1 adds proxy support for developers behind enterprise
+   firewalls. Rapid prototyping for cloud operations just got easier.
+
+     https://multipass.run/
+
+0 updates can be installed immediately.
+0 of these updates are security updates.
+
+
+Last login: Thu Mar 12 04:29:12 2020 from 10.0.0.129
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:~# '
+DEBUG:netmiko:new_output = 
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:~# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:~# '
+DEBUG:netmiko:new_output = 
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:~# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'file /srv/ftp/SPFDILUP91A-P-AL-7750-01-Scrubbed.log\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: file /srv/ftp/SPFDILUP91A-P-AL-7750-01-Scrubbed.log
+/srv/ftp/SPFDILUP91A-P-AL-7750-01-Scrubbed.log: ASCII text, with very long lines
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = 'file /srv/ftp/SPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\n/srv/ftp/SPFDILUP91A-P-AL-7750-01-Scrubbed.log: ASCII text, with very long lines\r\nroot@Ubuntu-Sandbox:~# '
+DEBUG:netmiko:new_output = file /srv/ftp/SPFDILUP91A-P-AL-7750-01-Scrubbed.log
+/srv/ftp/SPFDILUP91A-P-AL-7750-01-Scrubbed.log: ASCII text, with very long lines
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:repr = 'file /srv/ftp/SPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\n/srv/ftp/SPFDILUP91A-P-AL-7750-01-Scrubbed.log: ASCII text, with very long lines\r\nroot@Ubuntu-Sandbox:~# '
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = 'file /srv/ftp/SPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\n/srv/ftp/SPFDILUP91A-P-AL-7750-01-Scrubbed.log: ASCII text, with very long lines\r\nroot@Ubuntu-Sandbox:~# '
+DEBUG:netmiko:new_output = file /srv/ftp/SPFDILUP91A-P-AL-7750-01-Scrubbed.log
+/srv/ftp/SPFDILUP91A-P-AL-7750-01-Scrubbed.log: ASCII text, with very long lines
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:repr = 'file /srv/ftp/SPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\n/srv/ftp/SPFDILUP91A-P-AL-7750-01-Scrubbed.log: ASCII text, with very long lines\r\nroot@Ubuntu-Sandbox:~# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:~# '
+DEBUG:netmiko:new_output = 
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:~# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'ls -l\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: ls -l
+total 8
+-rw------- 1 root root   10 Mar 10 20:31 exampleFile.txt
+drwxr-xr-x 4 root root 4096 Dec 27 05:38 [0m[01;34msnap[0m
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = 'ls -l\r\ntotal 8\r\n-rw------- 1 root root   10 Mar 10 20:31 exampleFile.txt\r\ndrwxr-xr-x 4 root root 4096 Dec 27 05:38 \x1b[0m\x1b[01;34msnap\x1b[0m\r\nroot@Ubuntu-Sandbox:~# '
+DEBUG:netmiko:new_output = ls -l
+total 8
+-rw------- 1 root root   10 Mar 10 20:31 exampleFile.txt
+drwxr-xr-x 4 root root 4096 Dec 27 05:38 [0msnap[0m
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:repr = 'ls -l\r\ntotal 8\r\n-rw------- 1 root root   10 Mar 10 20:31 exampleFile.txt\r\ndrwxr-xr-x 4 root root 4096 Dec 27 05:38 \x1b[0msnap\x1b[0m\r\nroot@Ubuntu-Sandbox:~# '
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = 'ls -l\r\ntotal 8\r\n-rw------- 1 root root   10 Mar 10 20:31 exampleFile.txt\r\ndrwxr-xr-x 4 root root 4096 Dec 27 05:38 \x1b[0msnap\x1b[0m\r\nroot@Ubuntu-Sandbox:~# '
+DEBUG:netmiko:new_output = ls -l
+total 8
+-rw------- 1 root root   10 Mar 10 20:31 exampleFile.txt
+drwxr-xr-x 4 root root 4096 Dec 27 05:38 [0msnap[0m
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:repr = 'ls -l\r\ntotal 8\r\n-rw------- 1 root root   10 Mar 10 20:31 exampleFile.txt\r\ndrwxr-xr-x 4 root root 4096 Dec 27 05:38 \x1b[0msnap\x1b[0m\r\nroot@Ubuntu-Sandbox:~# '
+DEBUG:netmiko:write_channel: b'exit\n'
+DEBUG:paramiko.transport:starting thread (client mode): 0x15571f98
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.7.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-OpenSSH_8.0p1 Ubuntu-6build1
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_8.0p1)
+DEBUG:paramiko.transport:kex algos:['curve25519-sha256', 'curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group16-sha512', 'diffie-hellman-group18-sha512', 'diffie-hellman-group14-sha256', 'diffie-hellman-group14-sha1'] server key:['rsa-sha2-512', 'rsa-sha2-256', 'ssh-rsa', 'ecdsa-sha2-nistp256', 'ssh-ed25519'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: curve25519-sha256@libssh.org
+DEBUG:paramiko.transport:HostKey agreed: ssh-ed25519
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:kex engine KexCurve25519 specified hash_algo <built-in function openssl_sha256>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-ed25519 host key for 10.0.0.182: b'ffb19df005ec7aad77b1737a16a4a5b6'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:Received global request "hostkeys-00@openssh.com"
+DEBUG:paramiko.transport:Rejecting "hostkeys-00@openssh.com" global request from server.
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:read_channel: Welcome to Ubuntu 19.10 (GNU/Linux 5.3.0-40-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Thu 12 Mar 2020 04:32:29 AM UTC
+
+  System load:  0.0                Processes:            250
+  Usage of /:   35.2% of 19.56GB   Users logged in:      1
+  Memory usage: 9%                 IP address for ens33: 10.0.0.182
+  Swap usage:   0%
+
+ * Latest Kubernetes 1.18 beta is now available for your laptop, NUC, cloud
+   instance or Raspberry Pi, with automatic updates to the final GA release.
+
+     sudo snap install microk8s --channel=1.18/beta --classic
+
+ * Multipass 1.1 adds proxy support for developers behind enterprise
+   firewalls. Rapid prototyping for cloud operations just got easier.
+
+     https://multipass.run/
+
+0 updates can be installed immediately.
+0 of these updates are security updates.
+
+
+Last login: Thu Mar 12 04:30:07 2020 from 10.0.0.129
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:~# '
+DEBUG:netmiko:new_output = 
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:~# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:~# '
+DEBUG:netmiko:new_output = 
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:~# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'file /srv/ftp/SPFDILUP91A-P-AL-7750-01-Scrubbed.log\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: file /srv/ftp/SPFDILUP91A-P-AL-7750-01-Scrubbed.log
+/srv/ftp/SPFDILUP91A-P-AL-7750-01-Scrubbed.log: ASCII text, with very long lines
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = 'file /srv/ftp/SPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\n/srv/ftp/SPFDILUP91A-P-AL-7750-01-Scrubbed.log: ASCII text, with very long lines\r\nroot@Ubuntu-Sandbox:~# '
+DEBUG:netmiko:new_output = file /srv/ftp/SPFDILUP91A-P-AL-7750-01-Scrubbed.log
+/srv/ftp/SPFDILUP91A-P-AL-7750-01-Scrubbed.log: ASCII text, with very long lines
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:repr = 'file /srv/ftp/SPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\n/srv/ftp/SPFDILUP91A-P-AL-7750-01-Scrubbed.log: ASCII text, with very long lines\r\nroot@Ubuntu-Sandbox:~# '
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = 'file /srv/ftp/SPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\n/srv/ftp/SPFDILUP91A-P-AL-7750-01-Scrubbed.log: ASCII text, with very long lines\r\nroot@Ubuntu-Sandbox:~# '
+DEBUG:netmiko:new_output = file /srv/ftp/SPFDILUP91A-P-AL-7750-01-Scrubbed.log
+/srv/ftp/SPFDILUP91A-P-AL-7750-01-Scrubbed.log: ASCII text, with very long lines
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:repr = 'file /srv/ftp/SPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\n/srv/ftp/SPFDILUP91A-P-AL-7750-01-Scrubbed.log: ASCII text, with very long lines\r\nroot@Ubuntu-Sandbox:~# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:~# '
+DEBUG:netmiko:new_output = 
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:~# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'ls -l\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: ls -l
+total 8
+-rw------- 1 root root   10 Mar 10 20:31 exampleFile.txt
+drwxr-xr-x 4 root root 4096 Dec 27 05:38 [0m[01;34msnap[0m
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = 'ls -l\r\ntotal 8\r\n-rw------- 1 root root   10 Mar 10 20:31 exampleFile.txt\r\ndrwxr-xr-x 4 root root 4096 Dec 27 05:38 \x1b[0m\x1b[01;34msnap\x1b[0m\r\nroot@Ubuntu-Sandbox:~# '
+DEBUG:netmiko:new_output = ls -l
+total 8
+-rw------- 1 root root   10 Mar 10 20:31 exampleFile.txt
+drwxr-xr-x 4 root root 4096 Dec 27 05:38 [0msnap[0m
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:repr = 'ls -l\r\ntotal 8\r\n-rw------- 1 root root   10 Mar 10 20:31 exampleFile.txt\r\ndrwxr-xr-x 4 root root 4096 Dec 27 05:38 \x1b[0msnap\x1b[0m\r\nroot@Ubuntu-Sandbox:~# '
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = 'ls -l\r\ntotal 8\r\n-rw------- 1 root root   10 Mar 10 20:31 exampleFile.txt\r\ndrwxr-xr-x 4 root root 4096 Dec 27 05:38 \x1b[0msnap\x1b[0m\r\nroot@Ubuntu-Sandbox:~# '
+DEBUG:netmiko:new_output = ls -l
+total 8
+-rw------- 1 root root   10 Mar 10 20:31 exampleFile.txt
+drwxr-xr-x 4 root root 4096 Dec 27 05:38 [0msnap[0m
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:repr = 'ls -l\r\ntotal 8\r\n-rw------- 1 root root   10 Mar 10 20:31 exampleFile.txt\r\ndrwxr-xr-x 4 root root 4096 Dec 27 05:38 \x1b[0msnap\x1b[0m\r\nroot@Ubuntu-Sandbox:~# '
+DEBUG:netmiko:write_channel: b'exit\n'
+DEBUG:paramiko.transport:starting thread (client mode): 0x2a560470
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.7.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-OpenSSH_8.0p1 Ubuntu-6build1
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_8.0p1)
+DEBUG:paramiko.transport:kex algos:['curve25519-sha256', 'curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group16-sha512', 'diffie-hellman-group18-sha512', 'diffie-hellman-group14-sha256', 'diffie-hellman-group14-sha1'] server key:['rsa-sha2-512', 'rsa-sha2-256', 'ssh-rsa', 'ecdsa-sha2-nistp256', 'ssh-ed25519'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: curve25519-sha256@libssh.org
+DEBUG:paramiko.transport:HostKey agreed: ssh-ed25519
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:kex engine KexCurve25519 specified hash_algo <built-in function openssl_sha256>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-ed25519 host key for 10.0.0.182: b'ffb19df005ec7aad77b1737a16a4a5b6'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:Received global request "hostkeys-00@openssh.com"
+DEBUG:paramiko.transport:Rejecting "hostkeys-00@openssh.com" global request from server.
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:read_channel: Welcome to Ubuntu 19.10 (GNU/Linux 5.3.0-40-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Mon 16 Mar 2020 08:36:39 PM UTC
+
+  System load:  0.0                Processes:            233
+  Usage of /:   35.4% of 19.56GB   Users logged in:      1
+  Memory usage: 9%                 IP address for ens33: 10.0.0.182
+  Swap usage:   0%
+
+ * Latest Kubernetes 1.18 beta is now available for your laptop, NUC, cloud
+   instance or Raspberry Pi, with automatic updates to the final GA release.
+
+     sudo snap install microk8s --channel=1.18/beta --classic
+
+ * Multipass 1.1 adds proxy support for developers behind enterprise
+   firewalls. Rapid prototyping for cloud operations just got easier.
+
+     https://multipass.run/
+
+1 update can be installed immediately.
+0 of these updates are security updates.
+To see these additional updates run: apt list --upgradable
+
+
+Last login: Thu Mar 12 04:32:29 2020 from 10.0.0.129
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:~# '
+DEBUG:netmiko:new_output = 
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:~# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'cd /var/ftp/pub/vzw\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: cd /var/ftp/pub/vzw
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = 'cd /var/ftp/pub/vzw\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = cd /var/ftp/pub/vzw
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = 'cd /var/ftp/pub/vzw\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = 'cd /var/ftp/pub/vzw\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = cd /var/ftp/pub/vzw
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = 'cd /var/ftp/pub/vzw\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = 
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = 
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log
+/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log: cannot open `/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log' (No such file or directory)
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = "file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\n/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log: cannot open `/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log' (No such file or directory)\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# "
+DEBUG:netmiko:new_output = file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log
+/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log: cannot open `/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log' (No such file or directory)
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = "file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\n/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log: cannot open `/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log' (No such file or directory)\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# "
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = "file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\n/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log: cannot open `/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log' (No such file or directory)\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# "
+DEBUG:netmiko:new_output = file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log
+/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log: cannot open `/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log' (No such file or directory)
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = "file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\n/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log: cannot open `/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log' (No such file or directory)\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# "
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = 
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'ls -l\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: ls -l
+total 3656
+-rw------- 1 root root 3741117 Mar 16 20:36 SPFDILUP91A-P-AL-7750-01-Scrubbed.log
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = 'ls -l\r\ntotal 3656\r\n-rw------- 1 root root 3741117 Mar 16 20:36 SPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = ls -l
+total 3656
+-rw------- 1 root root 3741117 Mar 16 20:36 SPFDILUP91A-P-AL-7750-01-Scrubbed.log
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = 'ls -l\r\ntotal 3656\r\n-rw------- 1 root root 3741117 Mar 16 20:36 SPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = 'ls -l\r\ntotal 3656\r\n-rw------- 1 root root 3741117 Mar 16 20:36 SPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = ls -l
+total 3656
+-rw------- 1 root root 3741117 Mar 16 20:36 SPFDILUP91A-P-AL-7750-01-Scrubbed.log
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = 'ls -l\r\ntotal 3656\r\n-rw------- 1 root root 3741117 Mar 16 20:36 SPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:write_channel: b'exit\n'
+DEBUG:paramiko.transport:starting thread (client mode): 0xf6c10470
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.7.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-OpenSSH_8.0p1 Ubuntu-6build1
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_8.0p1)
+DEBUG:paramiko.transport:kex algos:['curve25519-sha256', 'curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group16-sha512', 'diffie-hellman-group18-sha512', 'diffie-hellman-group14-sha256', 'diffie-hellman-group14-sha1'] server key:['rsa-sha2-512', 'rsa-sha2-256', 'ssh-rsa', 'ecdsa-sha2-nistp256', 'ssh-ed25519'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: curve25519-sha256@libssh.org
+DEBUG:paramiko.transport:HostKey agreed: ssh-ed25519
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:kex engine KexCurve25519 specified hash_algo <built-in function openssl_sha256>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-ed25519 host key for 10.0.0.182: b'ffb19df005ec7aad77b1737a16a4a5b6'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:Received global request "hostkeys-00@openssh.com"
+DEBUG:paramiko.transport:Rejecting "hostkeys-00@openssh.com" global request from server.
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:read_channel: Welcome to Ubuntu 19.10 (GNU/Linux 5.3.0-40-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Mon 16 Mar 2020 08:42:17 PM UTC
+
+  System load:  0.0                Processes:            242
+  Usage of /:   35.4% of 19.56GB   Users logged in:      1
+  Memory usage: 10%                IP address for ens33: 10.0.0.182
+  Swap usage:   0%
+
+ * Latest Kubernetes 1.18 beta is now available for your laptop, NUC, cloud
+   instance or Raspberry Pi, with automatic updates to the final GA release.
+
+     sudo snap install microk8s --channel=1.18/beta --classic
+
+ * Multipass 1.1 adds proxy support for developers behind enterprise
+   firewalls. Rapid prototyping for cloud operations just got easier.
+
+     https://multipass.run/
+
+1 update can be installed immediately.
+0 of these updates are security updates.
+To see these additional updates run: apt list --upgradable
+
+
+Last login: Mon Mar 16 20:36:39 2020 from 10.0.0.129
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:~# '
+DEBUG:netmiko:new_output = 
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:~# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'cd /var/ftp/pub/vzw\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: cd /var/ftp/pub/vzw
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = 'cd /var/ftp/pub/vzw\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = cd /var/ftp/pub/vzw
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = 'cd /var/ftp/pub/vzw\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = 'cd /var/ftp/pub/vzw\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = cd /var/ftp/pub/vzw
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = 'cd /var/ftp/pub/vzw\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = 
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = 
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log
+/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log: cannot open `/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log' (No such file or directory)
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = "file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\n/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log: cannot open `/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log' (No such file or directory)\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# "
+DEBUG:netmiko:new_output = file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log
+/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log: cannot open `/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log' (No such file or directory)
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = "file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\n/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log: cannot open `/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log' (No such file or directory)\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# "
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = "file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\n/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log: cannot open `/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log' (No such file or directory)\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# "
+DEBUG:netmiko:new_output = file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log
+/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log: cannot open `/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log' (No such file or directory)
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = "file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\n/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log: cannot open `/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log' (No such file or directory)\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# "
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = 
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'---------------------------\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: ---------------------------
+
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = '---------------------------\r\n'
+DEBUG:netmiko:new_output = ---------------------------
+
+DEBUG:netmiko:repr = '---------------------------\r\n'
+DEBUG:netmiko:read_channel: ---------------------------: command not found
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = '---------------------------: command not found\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = ---------------------------: command not found
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = '---------------------------: command not found\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = '---------------------------\r\n---------------------------: command not found\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = ---------------------------
+---------------------------: command not found
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = '---------------------------\r\n---------------------------: command not found\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = 
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'ls -l\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: ls -l
+total 3656
+-rw------- 1 root root 3741117 Mar 16 20:42 SPFDILUP91A-P-AL-7750-01-Scrubbed.log
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = 'ls -l\r\ntotal 3656\r\n-rw------- 1 root root 3741117 Mar 16 20:42 SPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = ls -l
+total 3656
+-rw------- 1 root root 3741117 Mar 16 20:42 SPFDILUP91A-P-AL-7750-01-Scrubbed.log
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = 'ls -l\r\ntotal 3656\r\n-rw------- 1 root root 3741117 Mar 16 20:42 SPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = 'ls -l\r\ntotal 3656\r\n-rw------- 1 root root 3741117 Mar 16 20:42 SPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = ls -l
+total 3656
+-rw------- 1 root root 3741117 Mar 16 20:42 SPFDILUP91A-P-AL-7750-01-Scrubbed.log
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = 'ls -l\r\ntotal 3656\r\n-rw------- 1 root root 3741117 Mar 16 20:42 SPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:write_channel: b'exit\n'
+DEBUG:paramiko.transport:starting thread (client mode): 0xa6011ba8
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.7.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-OpenSSH_8.0p1 Ubuntu-6build1
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_8.0p1)
+DEBUG:paramiko.transport:kex algos:['curve25519-sha256', 'curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group16-sha512', 'diffie-hellman-group18-sha512', 'diffie-hellman-group14-sha256', 'diffie-hellman-group14-sha1'] server key:['rsa-sha2-512', 'rsa-sha2-256', 'ssh-rsa', 'ecdsa-sha2-nistp256', 'ssh-ed25519'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: curve25519-sha256@libssh.org
+DEBUG:paramiko.transport:HostKey agreed: ssh-ed25519
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:kex engine KexCurve25519 specified hash_algo <built-in function openssl_sha256>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-ed25519 host key for 10.0.0.182: b'ffb19df005ec7aad77b1737a16a4a5b6'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:Received global request "hostkeys-00@openssh.com"
+DEBUG:paramiko.transport:Rejecting "hostkeys-00@openssh.com" global request from server.
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:read_channel: Welcome to Ubuntu 19.10 (GNU/Linux 5.3.0-40-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Mon 16 Mar 2020 08:53:07 PM UTC
+
+  System load:  0.0                Processes:            245
+  Usage of /:   35.4% of 19.56GB   Users logged in:      1
+  Memory usage: 10%                IP address for ens33: 10.0.0.182
+  Swap usage:   0%
+
+ * Latest Kubernetes 1.18 beta is now available for your laptop, NUC, cloud
+   instance or Raspberry Pi, with automatic updates to the final GA release.
+
+     sudo snap install microk8s --channel=1.18/beta --classic
+
+ * Multipass 1.1 adds proxy support for developers behind enterprise
+   firewalls. Rapid prototyping for cloud operations just got easier.
+
+     https://multipass.run/
+
+1 update can be installed immediately.
+0 of these updates are security updates.
+To see these additional updates run: apt list --upgradable
+
+
+Last login: Mon Mar 16 20:42:17 2020 from 10.0.0.129
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:~# '
+DEBUG:netmiko:new_output = 
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:~# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'cd /var/ftp/pub/vzw\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: cd /var/ftp/pub/vzw
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = 'cd /var/ftp/pub/vzw\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = cd /var/ftp/pub/vzw
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = 'cd /var/ftp/pub/vzw\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = 'cd /var/ftp/pub/vzw\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = cd /var/ftp/pub/vzw
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = 'cd /var/ftp/pub/vzw\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = 
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'./cleandir\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: ./cleandir
+-bash: ./cleandir: No such file or directory
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = './cleandir\r\n-bash: ./cleandir: No such file or directory\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = ./cleandir
+-bash: ./cleandir: No such file or directory
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = './cleandir\r\n-bash: ./cleandir: No such file or directory\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = './cleandir\r\n-bash: ./cleandir: No such file or directory\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = ./cleandir
+-bash: ./cleandir: No such file or directory
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = './cleandir\r\n-bash: ./cleandir: No such file or directory\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:write_channel: b'exit\n'
+DEBUG:paramiko.transport:EOF in transport thread
+DEBUG:paramiko.transport:starting thread (client mode): 0xa60118d0
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.7.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-OpenSSH_8.0p1 Ubuntu-6build1
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_8.0p1)
+DEBUG:paramiko.transport:kex algos:['curve25519-sha256', 'curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group16-sha512', 'diffie-hellman-group18-sha512', 'diffie-hellman-group14-sha256', 'diffie-hellman-group14-sha1'] server key:['rsa-sha2-512', 'rsa-sha2-256', 'ssh-rsa', 'ecdsa-sha2-nistp256', 'ssh-ed25519'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: curve25519-sha256@libssh.org
+DEBUG:paramiko.transport:HostKey agreed: ssh-ed25519
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:kex engine KexCurve25519 specified hash_algo <built-in function openssl_sha256>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-ed25519 host key for 10.0.0.182: b'ffb19df005ec7aad77b1737a16a4a5b6'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:Received global request "hostkeys-00@openssh.com"
+DEBUG:paramiko.transport:Rejecting "hostkeys-00@openssh.com" global request from server.
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:read_channel: Welcome to Ubuntu 19.10 (GNU/Linux 5.3.0-40-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Mon 16 Mar 2020 08:53:12 PM UTC
+
+  System load:  0.0                Processes:            240
+  Usage of /:   35.4% of 19.56GB   Users logged in:      1
+  Memory usage: 10%                IP address for ens33: 10.0.0.182
+  Swap usage:   0%
+
+ * Latest Kubernetes 1.18 beta is now available for your laptop, NUC, cloud
+   instance or Raspberry Pi, with automatic updates to the final GA release.
+
+     sudo snap install microk8s --channel=1.18/beta --classic
+
+ * Multipass 1.1 adds proxy support for developers behind enterprise
+   firewalls. Rapid prototyping for cloud operations just got easier.
+
+     https://multipass.run/
+
+1 update can be installed immediately.
+0 of these updates are security updates.
+To see these additional updates run: apt list --upgradable
+
+
+Last login: Mon Mar 16 20:53:07 2020 from 10.0.0.129
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:~# '
+DEBUG:netmiko:new_output = 
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:~# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'cd /var/ftp/pub/vzw\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: cd /var/ftp/pub/vzw
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = 'cd /var/ftp/pub/vzw\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = cd /var/ftp/pub/vzw
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = 'cd /var/ftp/pub/vzw\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = 'cd /var/ftp/pub/vzw\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = cd /var/ftp/pub/vzw
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = 'cd /var/ftp/pub/vzw\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = 
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log
+/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log: cannot open `/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log' (No such file or directory)
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = "file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\n/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log: cannot open `/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log' (No such file or directory)\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# "
+DEBUG:netmiko:new_output = file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log
+/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log: cannot open `/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log' (No such file or directory)
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = "file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\n/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log: cannot open `/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log' (No such file or directory)\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# "
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = "file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\n/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log: cannot open `/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log' (No such file or directory)\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# "
+DEBUG:netmiko:new_output = file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log
+/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log: cannot open `/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log' (No such file or directory)
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = "file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\n/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log: cannot open `/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log' (No such file or directory)\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# "
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = 
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'ls -l\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: ls -l
+total 3664
+-rw-r--r-- 1 root root      10 Mar 16 20:52 okay.log
+-rw------- 1 root root 3741117 Mar 16 20:53 SPFDILUP91A-P-AL-7750-01-Scrubbed.log
+-rw-r--r-- 1 root root      11 Mar 16 20:52 test.cfg
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = 'ls -l\r\ntotal 3664\r\n-rw-r--r-- 1 root root      10 Mar 16 20:52 okay.log\r\n-rw------- 1 root root 3741117 Mar 16 20:53 SPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\n-rw-r--r-- 1 root root      11 Mar 16 20:52 test.cfg\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = ls -l
+total 3664
+-rw-r--r-- 1 root root      10 Mar 16 20:52 okay.log
+-rw------- 1 root root 3741117 Mar 16 20:53 SPFDILUP91A-P-AL-7750-01-Scrubbed.log
+-rw-r--r-- 1 root root      11 Mar 16 20:52 test.cfg
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = 'ls -l\r\ntotal 3664\r\n-rw-r--r-- 1 root root      10 Mar 16 20:52 okay.log\r\n-rw------- 1 root root 3741117 Mar 16 20:53 SPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\n-rw-r--r-- 1 root root      11 Mar 16 20:52 test.cfg\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = 'ls -l\r\ntotal 3664\r\n-rw-r--r-- 1 root root      10 Mar 16 20:52 okay.log\r\n-rw------- 1 root root 3741117 Mar 16 20:53 SPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\n-rw-r--r-- 1 root root      11 Mar 16 20:52 test.cfg\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = ls -l
+total 3664
+-rw-r--r-- 1 root root      10 Mar 16 20:52 okay.log
+-rw------- 1 root root 3741117 Mar 16 20:53 SPFDILUP91A-P-AL-7750-01-Scrubbed.log
+-rw-r--r-- 1 root root      11 Mar 16 20:52 test.cfg
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = 'ls -l\r\ntotal 3664\r\n-rw-r--r-- 1 root root      10 Mar 16 20:52 okay.log\r\n-rw------- 1 root root 3741117 Mar 16 20:53 SPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\n-rw-r--r-- 1 root root      11 Mar 16 20:52 test.cfg\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:write_channel: b'exit\n'
+DEBUG:paramiko.transport:starting thread (client mode): 0xaaf61ba8
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.7.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-OpenSSH_8.0p1 Ubuntu-6build1
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_8.0p1)
+DEBUG:paramiko.transport:kex algos:['curve25519-sha256', 'curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group16-sha512', 'diffie-hellman-group18-sha512', 'diffie-hellman-group14-sha256', 'diffie-hellman-group14-sha1'] server key:['rsa-sha2-512', 'rsa-sha2-256', 'ssh-rsa', 'ecdsa-sha2-nistp256', 'ssh-ed25519'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: curve25519-sha256@libssh.org
+DEBUG:paramiko.transport:HostKey agreed: ssh-ed25519
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:kex engine KexCurve25519 specified hash_algo <built-in function openssl_sha256>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-ed25519 host key for 10.0.0.182: b'ffb19df005ec7aad77b1737a16a4a5b6'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:Received global request "hostkeys-00@openssh.com"
+DEBUG:paramiko.transport:Rejecting "hostkeys-00@openssh.com" global request from server.
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:read_channel: Welcome to Ubuntu 19.10 (GNU/Linux 5.3.0-40-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Mon 16 Mar 2020 08:55:06 PM UTC
+
+  System load:  0.0                Processes:            238
+  Usage of /:   35.4% of 19.56GB   Users logged in:      1
+  Memory usage: 10%                IP address for ens33: 10.0.0.182
+  Swap usage:   0%
+
+ * Latest Kubernetes 1.18 beta is now available for your laptop, NUC, cloud
+   instance or Raspberry Pi, with automatic updates to the final GA release.
+
+     sudo snap install microk8s --channel=1.18/beta --classic
+
+ * Multipass 1.1 adds proxy support for developers behind enterprise
+   firewalls. Rapid prototyping for cloud operations just got easier.
+
+     https://multipass.run/
+
+1 update can be installed immediately.
+0 of these updates are security updates.
+To see these additional updates run: apt list --upgradable
+
+
+Last login: Mon Mar 16 20:53:12 2020 from 10.0.0.129
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:~# '
+DEBUG:netmiko:new_output = 
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:~# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'cd /var/ftp/pub/vzw\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: cd /var/ftp/pub/vzw
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = 'cd /var/ftp/pub/vzw\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = cd /var/ftp/pub/vzw
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = 'cd /var/ftp/pub/vzw\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = 'cd /var/ftp/pub/vzw\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = cd /var/ftp/pub/vzw
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = 'cd /var/ftp/pub/vzw\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = 
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'./cleandir\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: ./cleandir
+/usr/bin/rm: cannot remove '*txt*': No such file or directory
+/usr/bin/rm: cannot remove '*log*': No such file or directory
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = "./cleandir\r\n/usr/bin/rm: cannot remove '*txt*': No such file or directory\r\n/usr/bin/rm: cannot remove '*log*': No such file or directory\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# "
+DEBUG:netmiko:new_output = ./cleandir
+/usr/bin/rm: cannot remove '*txt*': No such file or directory
+/usr/bin/rm: cannot remove '*log*': No such file or directory
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = "./cleandir\r\n/usr/bin/rm: cannot remove '*txt*': No such file or directory\r\n/usr/bin/rm: cannot remove '*log*': No such file or directory\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# "
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = "./cleandir\r\n/usr/bin/rm: cannot remove '*txt*': No such file or directory\r\n/usr/bin/rm: cannot remove '*log*': No such file or directory\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# "
+DEBUG:netmiko:new_output = ./cleandir
+/usr/bin/rm: cannot remove '*txt*': No such file or directory
+/usr/bin/rm: cannot remove '*log*': No such file or directory
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = "./cleandir\r\n/usr/bin/rm: cannot remove '*txt*': No such file or directory\r\n/usr/bin/rm: cannot remove '*log*': No such file or directory\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# "
+DEBUG:netmiko:write_channel: b'exit\n'
+DEBUG:paramiko.transport:EOF in transport thread
+DEBUG:paramiko.transport:starting thread (client mode): 0xaaf615f8
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.7.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-OpenSSH_8.0p1 Ubuntu-6build1
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_8.0p1)
+DEBUG:paramiko.transport:kex algos:['curve25519-sha256', 'curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group16-sha512', 'diffie-hellman-group18-sha512', 'diffie-hellman-group14-sha256', 'diffie-hellman-group14-sha1'] server key:['rsa-sha2-512', 'rsa-sha2-256', 'ssh-rsa', 'ecdsa-sha2-nistp256', 'ssh-ed25519'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: curve25519-sha256@libssh.org
+DEBUG:paramiko.transport:HostKey agreed: ssh-ed25519
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:kex engine KexCurve25519 specified hash_algo <built-in function openssl_sha256>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-ed25519 host key for 10.0.0.182: b'ffb19df005ec7aad77b1737a16a4a5b6'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:Received global request "hostkeys-00@openssh.com"
+DEBUG:paramiko.transport:Rejecting "hostkeys-00@openssh.com" global request from server.
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:read_channel: Welcome to Ubuntu 19.10 (GNU/Linux 5.3.0-40-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Mon 16 Mar 2020 08:55:11 PM UTC
+
+  System load:  0.0                Processes:            241
+  Usage of /:   35.4% of 19.56GB   Users logged in:      1
+  Memory usage: 10%                IP address for ens33: 10.0.0.182
+  Swap usage:   0%
+
+ * Latest Kubernetes 1.18 beta is now available for your laptop, NUC, cloud
+   instance or Raspberry Pi, with automatic updates to the final GA release.
+
+     sudo snap install microk8s --channel=1.18/beta --classic
+
+ * Multipass 1.1 adds proxy support for developers behind enterprise
+   firewalls. Rapid prototyping for cloud operations just got easier.
+
+     https://multipass.run/
+
+1 update can be installed immediately.
+0 of these updates are security updates.
+To see these additional updates run: apt list --upgradable
+
+
+Last login: Mon Mar 16 20:55:06 2020 from 10.0.0.129
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:~# '
+DEBUG:netmiko:new_output = 
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:~# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'cd /var/ftp/pub/vzw\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: cd /var/ftp/pub/vzw
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = 'cd /var/ftp/pub/vzw\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = cd /var/ftp/pub/vzw
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = 'cd /var/ftp/pub/vzw\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = 'cd /var/ftp/pub/vzw\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = cd /var/ftp/pub/vzw
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = 'cd /var/ftp/pub/vzw\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = 
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log
+/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log: cannot open `/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log' (No such file or directory)
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = "file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\n/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log: cannot open `/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log' (No such file or directory)\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# "
+DEBUG:netmiko:new_output = file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log
+/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log: cannot open `/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log' (No such file or directory)
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = "file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\n/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log: cannot open `/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log' (No such file or directory)\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# "
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = "file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\n/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log: cannot open `/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log' (No such file or directory)\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# "
+DEBUG:netmiko:new_output = file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log
+/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log: cannot open `/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log' (No such file or directory)
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = "file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\n/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log: cannot open `/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log' (No such file or directory)\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# "
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = 
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'ls -l\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: ls -l
+total 3664
+-rwxr-xr-x 1 root root      72 Mar 16 20:23 [0m[01;32mcleandir[0m
+-rwxr-xr-x 1 root root     158 Mar 16 20:25 [01;32mmakesim[0m
+-rw------- 1 root root 3741117 Mar 16 20:55 SPFDILUP91A-P-AL-7750-01-Scrubbed.log
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = 'ls -l\r\ntotal 3664\r\n-rwxr-xr-x 1 root root      72 Mar 16 20:23 \x1b[0m\x1b[01;32mcleandir\x1b[0m\r\n-rwxr-xr-x 1 root root     158 Mar 16 20:25 \x1b[01;32mmakesim\x1b[0m\r\n-rw------- 1 root root 3741117 Mar 16 20:55 SPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = ls -l
+total 3664
+-rwxr-xr-x 1 root root      72 Mar 16 20:23 [0mcleandir[0m
+-rwxr-xr-x 1 root root     158 Mar 16 20:25 makesim[0m
+-rw------- 1 root root 3741117 Mar 16 20:55 SPFDILUP91A-P-AL-7750-01-Scrubbed.log
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = 'ls -l\r\ntotal 3664\r\n-rwxr-xr-x 1 root root      72 Mar 16 20:23 \x1b[0mcleandir\x1b[0m\r\n-rwxr-xr-x 1 root root     158 Mar 16 20:25 makesim\x1b[0m\r\n-rw------- 1 root root 3741117 Mar 16 20:55 SPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = 'ls -l\r\ntotal 3664\r\n-rwxr-xr-x 1 root root      72 Mar 16 20:23 \x1b[0mcleandir\x1b[0m\r\n-rwxr-xr-x 1 root root     158 Mar 16 20:25 makesim\x1b[0m\r\n-rw------- 1 root root 3741117 Mar 16 20:55 SPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = ls -l
+total 3664
+-rwxr-xr-x 1 root root      72 Mar 16 20:23 [0mcleandir[0m
+-rwxr-xr-x 1 root root     158 Mar 16 20:25 makesim[0m
+-rw------- 1 root root 3741117 Mar 16 20:55 SPFDILUP91A-P-AL-7750-01-Scrubbed.log
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = 'ls -l\r\ntotal 3664\r\n-rwxr-xr-x 1 root root      72 Mar 16 20:23 \x1b[0mcleandir\x1b[0m\r\n-rwxr-xr-x 1 root root     158 Mar 16 20:25 makesim\x1b[0m\r\n-rw------- 1 root root 3741117 Mar 16 20:55 SPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:write_channel: b'exit\n'
+DEBUG:paramiko.transport:starting thread (client mode): 0xae1616d8
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.7.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-OpenSSH_8.0p1 Ubuntu-6build1
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_8.0p1)
+DEBUG:paramiko.transport:kex algos:['curve25519-sha256', 'curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group16-sha512', 'diffie-hellman-group18-sha512', 'diffie-hellman-group14-sha256', 'diffie-hellman-group14-sha1'] server key:['rsa-sha2-512', 'rsa-sha2-256', 'ssh-rsa', 'ecdsa-sha2-nistp256', 'ssh-ed25519'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: curve25519-sha256@libssh.org
+DEBUG:paramiko.transport:HostKey agreed: ssh-ed25519
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:kex engine KexCurve25519 specified hash_algo <built-in function openssl_sha256>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-ed25519 host key for 10.0.0.182: b'ffb19df005ec7aad77b1737a16a4a5b6'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:Received global request "hostkeys-00@openssh.com"
+DEBUG:paramiko.transport:Rejecting "hostkeys-00@openssh.com" global request from server.
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:read_channel: Welcome to Ubuntu 19.10 (GNU/Linux 5.3.0-40-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Mon 16 Mar 2020 09:01:19 PM UTC
+
+  System load:  0.0                Processes:            248
+  Usage of /:   35.4% of 19.56GB   Users logged in:      1
+  Memory usage: 10%                IP address for ens33: 10.0.0.182
+  Swap usage:   0%
+
+ * Latest Kubernetes 1.18 beta is now available for your laptop, NUC, cloud
+   instance or Raspberry Pi, with automatic updates to the final GA release.
+
+     sudo snap install microk8s --channel=1.18/beta --classic
+
+ * Multipass 1.1 adds proxy support for developers behind enterprise
+   firewalls. Rapid prototyping for cloud operations just got easier.
+
+     https://multipass.run/
+
+1 update can be installed immediately.
+0 of these updates are security updates.
+To see these additional updates run: apt list --upgradable
+
+
+Last login: Mon Mar 16 20:55:11 2020 from 10.0.0.129
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:~# '
+DEBUG:netmiko:new_output = 
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:~# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'cd /var/ftp/pub/vzw\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: cd /var/ftp/pub/vzw
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = 'cd /var/ftp/pub/vzw\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = cd /var/ftp/pub/vzw
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = 'cd /var/ftp/pub/vzw\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = 'cd /var/ftp/pub/vzw\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = cd /var/ftp/pub/vzw
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = 'cd /var/ftp/pub/vzw\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = 
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'./cleandir\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: ./cleandir
+/usr/bin/rm: cannot remove '*cfg*': No such file or directory
+/usr/bin/rm: cannot remove '*txt*': No such file or directory
+/usr/bin/rm: cannot remove '*log*': No such file or directory
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = "./cleandir\r\n/usr/bin/rm: cannot remove '*cfg*': No such file or directory\r\n/usr/bin/rm: cannot remove '*txt*': No such file or directory\r\n/usr/bin/rm: cannot remove '*log*': No such file or directory\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# "
+DEBUG:netmiko:new_output = ./cleandir
+/usr/bin/rm: cannot remove '*cfg*': No such file or directory
+/usr/bin/rm: cannot remove '*txt*': No such file or directory
+/usr/bin/rm: cannot remove '*log*': No such file or directory
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = "./cleandir\r\n/usr/bin/rm: cannot remove '*cfg*': No such file or directory\r\n/usr/bin/rm: cannot remove '*txt*': No such file or directory\r\n/usr/bin/rm: cannot remove '*log*': No such file or directory\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# "
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = "./cleandir\r\n/usr/bin/rm: cannot remove '*cfg*': No such file or directory\r\n/usr/bin/rm: cannot remove '*txt*': No such file or directory\r\n/usr/bin/rm: cannot remove '*log*': No such file or directory\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# "
+DEBUG:netmiko:new_output = ./cleandir
+/usr/bin/rm: cannot remove '*cfg*': No such file or directory
+/usr/bin/rm: cannot remove '*txt*': No such file or directory
+/usr/bin/rm: cannot remove '*log*': No such file or directory
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = "./cleandir\r\n/usr/bin/rm: cannot remove '*cfg*': No such file or directory\r\n/usr/bin/rm: cannot remove '*txt*': No such file or directory\r\n/usr/bin/rm: cannot remove '*log*': No such file or directory\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# "
+DEBUG:netmiko:write_channel: b'exit\n'
+DEBUG:paramiko.transport:EOF in transport thread
+DEBUG:paramiko.transport:starting thread (client mode): 0xae1615f8
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.7.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-OpenSSH_8.0p1 Ubuntu-6build1
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_8.0p1)
+DEBUG:paramiko.transport:kex algos:['curve25519-sha256', 'curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group16-sha512', 'diffie-hellman-group18-sha512', 'diffie-hellman-group14-sha256', 'diffie-hellman-group14-sha1'] server key:['rsa-sha2-512', 'rsa-sha2-256', 'ssh-rsa', 'ecdsa-sha2-nistp256', 'ssh-ed25519'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: curve25519-sha256@libssh.org
+DEBUG:paramiko.transport:HostKey agreed: ssh-ed25519
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:kex engine KexCurve25519 specified hash_algo <built-in function openssl_sha256>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-ed25519 host key for 10.0.0.182: b'ffb19df005ec7aad77b1737a16a4a5b6'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:Received global request "hostkeys-00@openssh.com"
+DEBUG:paramiko.transport:Rejecting "hostkeys-00@openssh.com" global request from server.
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:read_channel: Welcome to Ubuntu 19.10 (GNU/Linux 5.3.0-40-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Mon 16 Mar 2020 09:01:24 PM UTC
+
+  System load:  0.0                Processes:            244
+  Usage of /:   35.4% of 19.56GB   Users logged in:      1
+  Memory usage: 10%                IP address for ens33: 10.0.0.182
+  Swap usage:   0%
+
+ * Latest Kubernetes 1.18 beta is now available for your laptop, NUC, cloud
+   instance or Raspberry Pi, with automatic updates to the final GA release.
+
+     sudo snap install microk8s --channel=1.18/beta --classic
+
+ * Multipass 1.1 adds proxy support for developers behind enterprise
+   firewalls. Rapid prototyping for cloud operations just got easier.
+
+     https://multipass.run/
+
+1 update can be installed immediately.
+0 of these updates are security updates.
+To see these additional updates run: apt list --upgradable
+
+
+Last login: Mon Mar 16 21:01:19 2020 from 10.0.0.129
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:~# '
+DEBUG:netmiko:new_output = 
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:~# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'cd /var/ftp/pub/vzw\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: cd /var/ftp/pub/vzw
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = 'cd /var/ftp/pub/vzw\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = cd /var/ftp/pub/vzw
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = 'cd /var/ftp/pub/vzw\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = 'cd /var/ftp/pub/vzw\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = cd /var/ftp/pub/vzw
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = 'cd /var/ftp/pub/vzw\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = 
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log
+/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log: cannot open `/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log' (No such file or directory)
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = "file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\n/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log: cannot open `/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log' (No such file or directory)\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# "
+DEBUG:netmiko:new_output = file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log
+/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log: cannot open `/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log' (No such file or directory)
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = "file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\n/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log: cannot open `/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log' (No such file or directory)\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# "
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = "file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\n/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log: cannot open `/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log' (No such file or directory)\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# "
+DEBUG:netmiko:new_output = file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log
+/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log: cannot open `/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log' (No such file or directory)
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = "file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\n/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log: cannot open `/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log' (No such file or directory)\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# "
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = 
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'./makesimSPFDILUP91A-P-AL-7750-01-Scrubbed.log\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: ./makesimSPFDILUP91A-P-AL-7750-01-Scrubbed.log
+-bash: ./makesimSPFDILUP91A-P-AL-7750-01-Scrubbed.log: No such file or directory
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = './makesimSPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\n-bash: ./makesimSPFDILUP91A-P-AL-7750-01-Scrubbed.log: No such file or directory\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = ./makesimSPFDILUP91A-P-AL-7750-01-Scrubbed.log
+-bash: ./makesimSPFDILUP91A-P-AL-7750-01-Scrubbed.log: No such file or directory
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = './makesimSPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\n-bash: ./makesimSPFDILUP91A-P-AL-7750-01-Scrubbed.log: No such file or directory\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = './makesimSPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\n-bash: ./makesimSPFDILUP91A-P-AL-7750-01-Scrubbed.log: No such file or directory\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = ./makesimSPFDILUP91A-P-AL-7750-01-Scrubbed.log
+-bash: ./makesimSPFDILUP91A-P-AL-7750-01-Scrubbed.log: No such file or directory
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = './makesimSPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\n-bash: ./makesimSPFDILUP91A-P-AL-7750-01-Scrubbed.log: No such file or directory\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = 
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'ls -l\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: ls -l
+total 3664
+-rwxr-xr-x 1 root root      72 Mar 16 20:23 [0m[01;32mcleandir[0m
+-rwxr-xr-x 1 root root     158 Mar 16 20:25 [01;32mmakesim[0m
+-rw------- 1 root root 3741117 Mar 16 21:01 SPFDILUP91A-P-AL-7750-01-Scrubbed.log
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = 'ls -l\r\ntotal 3664\r\n-rwxr-xr-x 1 root root      72 Mar 16 20:23 \x1b[0m\x1b[01;32mcleandir\x1b[0m\r\n-rwxr-xr-x 1 root root     158 Mar 16 20:25 \x1b[01;32mmakesim\x1b[0m\r\n-rw------- 1 root root 3741117 Mar 16 21:01 SPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = ls -l
+total 3664
+-rwxr-xr-x 1 root root      72 Mar 16 20:23 [0mcleandir[0m
+-rwxr-xr-x 1 root root     158 Mar 16 20:25 makesim[0m
+-rw------- 1 root root 3741117 Mar 16 21:01 SPFDILUP91A-P-AL-7750-01-Scrubbed.log
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = 'ls -l\r\ntotal 3664\r\n-rwxr-xr-x 1 root root      72 Mar 16 20:23 \x1b[0mcleandir\x1b[0m\r\n-rwxr-xr-x 1 root root     158 Mar 16 20:25 makesim\x1b[0m\r\n-rw------- 1 root root 3741117 Mar 16 21:01 SPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = 'ls -l\r\ntotal 3664\r\n-rwxr-xr-x 1 root root      72 Mar 16 20:23 \x1b[0mcleandir\x1b[0m\r\n-rwxr-xr-x 1 root root     158 Mar 16 20:25 makesim\x1b[0m\r\n-rw------- 1 root root 3741117 Mar 16 21:01 SPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = ls -l
+total 3664
+-rwxr-xr-x 1 root root      72 Mar 16 20:23 [0mcleandir[0m
+-rwxr-xr-x 1 root root     158 Mar 16 20:25 makesim[0m
+-rw------- 1 root root 3741117 Mar 16 21:01 SPFDILUP91A-P-AL-7750-01-Scrubbed.log
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = 'ls -l\r\ntotal 3664\r\n-rwxr-xr-x 1 root root      72 Mar 16 20:23 \x1b[0mcleandir\x1b[0m\r\n-rwxr-xr-x 1 root root     158 Mar 16 20:25 makesim\x1b[0m\r\n-rw------- 1 root root 3741117 Mar 16 21:01 SPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:write_channel: b'exit\n'
+DEBUG:paramiko.transport:starting thread (client mode): 0x447a16d8
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.7.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-OpenSSH_8.0p1 Ubuntu-6build1
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_8.0p1)
+DEBUG:paramiko.transport:kex algos:['curve25519-sha256', 'curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group16-sha512', 'diffie-hellman-group18-sha512', 'diffie-hellman-group14-sha256', 'diffie-hellman-group14-sha1'] server key:['rsa-sha2-512', 'rsa-sha2-256', 'ssh-rsa', 'ecdsa-sha2-nistp256', 'ssh-ed25519'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: curve25519-sha256@libssh.org
+DEBUG:paramiko.transport:HostKey agreed: ssh-ed25519
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:kex engine KexCurve25519 specified hash_algo <built-in function openssl_sha256>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-ed25519 host key for 10.0.0.182: b'ffb19df005ec7aad77b1737a16a4a5b6'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:Received global request "hostkeys-00@openssh.com"
+DEBUG:paramiko.transport:Rejecting "hostkeys-00@openssh.com" global request from server.
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:read_channel: Welcome to Ubuntu 19.10 (GNU/Linux 5.3.0-40-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Mon 16 Mar 2020 09:02:16 PM UTC
+
+  System load:  0.0                Processes:            249
+  Usage of /:   35.4% of 19.56GB   Users logged in:      1
+  Memory usage: 10%                IP address for ens33: 10.0.0.182
+  Swap usage:   0%
+
+ * Latest Kubernetes 1.18 beta is now available for your laptop, NUC, cloud
+   instance or Raspberry Pi, with automatic updates to the final GA release.
+
+     sudo snap install microk8s --channel=1.18/beta --classic
+
+ * Multipass 1.1 adds proxy support for developers behind enterprise
+   firewalls. Rapid prototyping for cloud operations just got easier.
+
+     https://multipass.run/
+
+1 update can be installed immediately.
+0 of these updates are security updates.
+To see these additional updates run: apt list --upgradable
+
+
+Last login: Mon Mar 16 21:01:24 2020 from 10.0.0.129
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:~# '
+DEBUG:netmiko:new_output = 
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:~# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'cd /var/ftp/pub/vzw\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: cd /var/ftp/pub/vzw
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = 'cd /var/ftp/pub/vzw\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = cd /var/ftp/pub/vzw
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = 'cd /var/ftp/pub/vzw\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = 'cd /var/ftp/pub/vzw\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = cd /var/ftp/pub/vzw
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = 'cd /var/ftp/pub/vzw\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = 
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'./cleandir\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: ./cleandir
+/usr/bin/rm: cannot remove '*txt*': No such file or directory
+/usr/bin/rm: cannot remove '*log*': No such file or directory
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = "./cleandir\r\n/usr/bin/rm: cannot remove '*txt*': No such file or directory\r\n/usr/bin/rm: cannot remove '*log*': No such file or directory\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# "
+DEBUG:netmiko:new_output = ./cleandir
+/usr/bin/rm: cannot remove '*txt*': No such file or directory
+/usr/bin/rm: cannot remove '*log*': No such file or directory
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = "./cleandir\r\n/usr/bin/rm: cannot remove '*txt*': No such file or directory\r\n/usr/bin/rm: cannot remove '*log*': No such file or directory\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# "
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = "./cleandir\r\n/usr/bin/rm: cannot remove '*txt*': No such file or directory\r\n/usr/bin/rm: cannot remove '*log*': No such file or directory\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# "
+DEBUG:netmiko:new_output = ./cleandir
+/usr/bin/rm: cannot remove '*txt*': No such file or directory
+/usr/bin/rm: cannot remove '*log*': No such file or directory
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = "./cleandir\r\n/usr/bin/rm: cannot remove '*txt*': No such file or directory\r\n/usr/bin/rm: cannot remove '*log*': No such file or directory\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# "
+DEBUG:netmiko:write_channel: b'exit\n'
+DEBUG:paramiko.transport:EOF in transport thread
+DEBUG:paramiko.transport:starting thread (client mode): 0x447a15f8
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.7.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-OpenSSH_8.0p1 Ubuntu-6build1
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_8.0p1)
+DEBUG:paramiko.transport:kex algos:['curve25519-sha256', 'curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group16-sha512', 'diffie-hellman-group18-sha512', 'diffie-hellman-group14-sha256', 'diffie-hellman-group14-sha1'] server key:['rsa-sha2-512', 'rsa-sha2-256', 'ssh-rsa', 'ecdsa-sha2-nistp256', 'ssh-ed25519'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: curve25519-sha256@libssh.org
+DEBUG:paramiko.transport:HostKey agreed: ssh-ed25519
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:kex engine KexCurve25519 specified hash_algo <built-in function openssl_sha256>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-ed25519 host key for 10.0.0.182: b'ffb19df005ec7aad77b1737a16a4a5b6'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:Received global request "hostkeys-00@openssh.com"
+DEBUG:paramiko.transport:Rejecting "hostkeys-00@openssh.com" global request from server.
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:read_channel: Welcome to Ubuntu 19.10 (GNU/Linux 5.3.0-40-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Mon 16 Mar 2020 09:02:21 PM UTC
+
+  System load:  0.0                Processes:            248
+  Usage of /:   35.4% of 19.56GB   Users logged in:      1
+  Memory usage: 10%                IP address for ens33: 10.0.0.182
+  Swap usage:   0%
+
+ * Latest Kubernetes 1.18 beta is now available for your laptop, NUC, cloud
+   instance or Raspberry Pi, with automatic updates to the final GA release.
+
+     sudo snap install microk8s --channel=1.18/beta --classic
+
+ * Multipass 1.1 adds proxy support for developers behind enterprise
+   firewalls. Rapid prototyping for cloud operations just got easier.
+
+     https://multipass.run/
+
+1 update can be installed immediately.
+0 of these updates are security updates.
+To see these additional updates run: apt list --upgradable
+
+
+Last login: Mon Mar 16 21:02:17 2020 from 10.0.0.129
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:~# '
+DEBUG:netmiko:new_output = 
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:~# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'cd /var/ftp/pub/vzw\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: cd /var/ftp/pub/vzw
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = 'cd /var/ftp/pub/vzw\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = cd /var/ftp/pub/vzw
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = 'cd /var/ftp/pub/vzw\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = 'cd /var/ftp/pub/vzw\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = cd /var/ftp/pub/vzw
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = 'cd /var/ftp/pub/vzw\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = 
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log
+/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log: cannot open `/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log' (No such file or directory)
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = "file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\n/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log: cannot open `/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log' (No such file or directory)\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# "
+DEBUG:netmiko:new_output = file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log
+/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log: cannot open `/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log' (No such file or directory)
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = "file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\n/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log: cannot open `/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log' (No such file or directory)\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# "
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = "file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\n/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log: cannot open `/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log' (No such file or directory)\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# "
+DEBUG:netmiko:new_output = file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log
+/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log: cannot open `/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log' (No such file or directory)
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = "file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\n/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log: cannot open `/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log' (No such file or directory)\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# "
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = 
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'./makesim SPFDILUP91A-P-AL-7750-01-Scrubbed.log\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: ./makesim SPFDILUP91A-P-AL-7750-01-Scrubbed.log
+sed: invalid option -- '1'
+Usage: sed [OPTION]... {script-only-if-no-other-script} [input-file]...
+
+  -n, --quiet, --silent
+                 suppress automatic printing of pattern space
+      --debug
+                 annotate program execution
+  -e script, --expression=script
+                 add the script to the commands to be executed
+  -f script-file, --file=script-file
+                 add the contents of script-file to the commands to be executed
+  --follow-symlinks
+                 follow symlinks when processing in place
+  -i[SUFFIX], --in-place[=SUFFIX]
+                 edit files in place (makes backup if SUFFIX supplied)
+  -l N, --line-length=N
+                 specify the desired line-wrap length for the `l' command
+  --posix
+                 disable all GNU extensions.
+  -E, -r, --regexp-extended
+                 use extended regular expressions in the script
+                 (for portability use POSIX -E).
+  -s, --separate
+                 consider files as separate rather than as a single,
+                 continuous long stream.
+      --sandbox
+                 operate in sandbox mode (disable e/r/w commands).
+  -u, --unbuffered
+                 load minimal amounts of data from the input files and flush
+                 the output buffers more often
+  -z, --null-data
+                 separate lines by NUL characters
+      --help     display this help and exit
+      --version  output version information and exit
+
+If no -e, --expression, -f, or --file option is given, then the first
+non-option argument is taken as the sed script to interpret.  All
+remaining arguments are names of input files; if no input files are
+specified, then the standard input is read.
+
+GNU sed home page: <https://www.gnu.org/software/sed/>.
+General help using GNU software: <https://www.gnu.org/gethelp/>.
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = "./makesim SPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\nsed: invalid option -- '1'\r\nUsage: sed [OPTION]... {script-only-if-no-other-script} [input-file]...\r\n\r\n  -n, --quiet, --silent\r\n                 suppress automatic printing of pattern space\r\n      --debug\r\n                 annotate program execution\r\n  -e script, --expression=script\r\n                 add the script to the commands to be executed\r\n  -f script-file, --file=script-file\r\n                 add the contents of script-file to the commands to be executed\r\n  --follow-symlinks\r\n                 follow symlinks when processing in place\r\n  -i[SUFFIX], --in-place[=SUFFIX]\r\n                 edit files in place (makes backup if SUFFIX supplied)\r\n  -l N, --line-length=N\r\n                 specify the desired line-wrap length for the `l' command\r\n  --posix\r\n                 disable all GNU extensions.\r\n  -E, -r, --regexp-extended\r\n                 use extended regular expressions in the script\r\n                 (for portability use POSIX -E).\r\n  -s, --separate\r\n                 consider files as separate rather than as a single,\r\n                 continuous long stream.\r\n      --sandbox\r\n                 operate in sandbox mode (disable e/r/w commands).\r\n  -u, --unbuffered\r\n                 load minimal amounts of data from the input files and flush\r\n                 the output buffers more often\r\n  -z, --null-data\r\n                 separate lines by NUL characters\r\n      --help     display this help and exit\r\n      --version  output version information and exit\r\n\r\nIf no -e, --expression, -f, or --file option is given, then the first\r\nnon-option argument is taken as the sed script to interpret.  All\r\nremaining arguments are names of input files; if no input files are\r\nspecified, then the standard input is read.\r\n\r\nGNU sed home page: <https://www.gnu.org/software/sed/>.\r\nGeneral help using GNU software: <https://www.gnu.org/gethelp/>.\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# "
+DEBUG:netmiko:new_output = ./makesim SPFDILUP91A-P-AL-7750-01-Scrubbed.log
+sed: invalid option -- '1'
+Usage: sed [OPTION]... {script-only-if-no-other-script} [input-file]...
+
+  -n, --quiet, --silent
+                 suppress automatic printing of pattern space
+      --debug
+                 annotate program execution
+  -e script, --expression=script
+                 add the script to the commands to be executed
+  -f script-file, --file=script-file
+                 add the contents of script-file to the commands to be executed
+  --follow-symlinks
+                 follow symlinks when processing in place
+  -i[SUFFIX], --in-place[=SUFFIX]
+                 edit files in place (makes backup if SUFFIX supplied)
+  -l N, --line-length=N
+                 specify the desired line-wrap length for the `l' command
+  --posix
+                 disable all GNU extensions.
+  -E, -r, --regexp-extended
+                 use extended regular expressions in the script
+                 (for portability use POSIX -E).
+  -s, --separate
+                 consider files as separate rather than as a single,
+                 continuous long stream.
+      --sandbox
+                 operate in sandbox mode (disable e/r/w commands).
+  -u, --unbuffered
+                 load minimal amounts of data from the input files and flush
+                 the output buffers more often
+  -z, --null-data
+                 separate lines by NUL characters
+      --help     display this help and exit
+      --version  output version information and exit
+
+If no -e, --expression, -f, or --file option is given, then the first
+non-option argument is taken as the sed script to interpret.  All
+remaining arguments are names of input files; if no input files are
+specified, then the standard input is read.
+
+GNU sed home page: <https://www.gnu.org/software/sed/>.
+General help using GNU software: <https://www.gnu.org/gethelp/>.
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = "./makesim SPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\nsed: invalid option -- '1'\r\nUsage: sed [OPTION]... {script-only-if-no-other-script} [input-file]...\r\n\r\n  -n, --quiet, --silent\r\n                 suppress automatic printing of pattern space\r\n      --debug\r\n                 annotate program execution\r\n  -e script, --expression=script\r\n                 add the script to the commands to be executed\r\n  -f script-file, --file=script-file\r\n                 add the contents of script-file to the commands to be executed\r\n  --follow-symlinks\r\n                 follow symlinks when processing in place\r\n  -i[SUFFIX], --in-place[=SUFFIX]\r\n                 edit files in place (makes backup if SUFFIX supplied)\r\n  -l N, --line-length=N\r\n                 specify the desired line-wrap length for the `l' command\r\n  --posix\r\n                 disable all GNU extensions.\r\n  -E, -r, --regexp-extended\r\n                 use extended regular expressions in the script\r\n                 (for portability use POSIX -E).\r\n  -s, --separate\r\n                 consider files as separate rather than as a single,\r\n                 continuous long stream.\r\n      --sandbox\r\n                 operate in sandbox mode (disable e/r/w commands).\r\n  -u, --unbuffered\r\n                 load minimal amounts of data from the input files and flush\r\n                 the output buffers more often\r\n  -z, --null-data\r\n                 separate lines by NUL characters\r\n      --help     display this help and exit\r\n      --version  output version information and exit\r\n\r\nIf no -e, --expression, -f, or --file option is given, then the first\r\nnon-option argument is taken as the sed script to interpret.  All\r\nremaining arguments are names of input files; if no input files are\r\nspecified, then the standard input is read.\r\n\r\nGNU sed home page: <https://www.gnu.org/software/sed/>.\r\nGeneral help using GNU software: <https://www.gnu.org/gethelp/>.\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# "
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = "./makesim SPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\nsed: invalid option -- '1'\r\nUsage: sed [OPTION]... {script-only-if-no-other-script} [input-file]...\r\n\r\n  -n, --quiet, --silent\r\n                 suppress automatic printing of pattern space\r\n      --debug\r\n                 annotate program execution\r\n  -e script, --expression=script\r\n                 add the script to the commands to be executed\r\n  -f script-file, --file=script-file\r\n                 add the contents of script-file to the commands to be executed\r\n  --follow-symlinks\r\n                 follow symlinks when processing in place\r\n  -i[SUFFIX], --in-place[=SUFFIX]\r\n                 edit files in place (makes backup if SUFFIX supplied)\r\n  -l N, --line-length=N\r\n                 specify the desired line-wrap length for the `l' command\r\n  --posix\r\n                 disable all GNU extensions.\r\n  -E, -r, --regexp-extended\r\n                 use extended regular expressions in the script\r\n                 (for portability use POSIX -E).\r\n  -s, --separate\r\n                 consider files as separate rather than as a single,\r\n                 continuous long stream.\r\n      --sandbox\r\n                 operate in sandbox mode (disable e/r/w commands).\r\n  -u, --unbuffered\r\n                 load minimal amounts of data from the input files and flush\r\n                 the output buffers more often\r\n  -z, --null-data\r\n                 separate lines by NUL characters\r\n      --help     display this help and exit\r\n      --version  output version information and exit\r\n\r\nIf no -e, --expression, -f, or --file option is given, then the first\r\nnon-option argument is taken as the sed script to interpret.  All\r\nremaining arguments are names of input files; if no input files are\r\nspecified, then the standard input is read.\r\n\r\nGNU sed home page: <https://www.gnu.org/software/sed/>.\r\nGeneral help using GNU software: <https://www.gnu.org/gethelp/>.\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# "
+DEBUG:netmiko:new_output = ./makesim SPFDILUP91A-P-AL-7750-01-Scrubbed.log
+sed: invalid option -- '1'
+Usage: sed [OPTION]... {script-only-if-no-other-script} [input-file]...
+
+  -n, --quiet, --silent
+                 suppress automatic printing of pattern space
+      --debug
+                 annotate program execution
+  -e script, --expression=script
+                 add the script to the commands to be executed
+  -f script-file, --file=script-file
+                 add the contents of script-file to the commands to be executed
+  --follow-symlinks
+                 follow symlinks when processing in place
+  -i[SUFFIX], --in-place[=SUFFIX]
+                 edit files in place (makes backup if SUFFIX supplied)
+  -l N, --line-length=N
+                 specify the desired line-wrap length for the `l' command
+  --posix
+                 disable all GNU extensions.
+  -E, -r, --regexp-extended
+                 use extended regular expressions in the script
+                 (for portability use POSIX -E).
+  -s, --separate
+                 consider files as separate rather than as a single,
+                 continuous long stream.
+      --sandbox
+                 operate in sandbox mode (disable e/r/w commands).
+  -u, --unbuffered
+                 load minimal amounts of data from the input files and flush
+                 the output buffers more often
+  -z, --null-data
+                 separate lines by NUL characters
+      --help     display this help and exit
+      --version  output version information and exit
+
+If no -e, --expression, -f, or --file option is given, then the first
+non-option argument is taken as the sed script to interpret.  All
+remaining arguments are names of input files; if no input files are
+specified, then the standard input is read.
+
+GNU sed home page: <https://www.gnu.org/software/sed/>.
+General help using GNU software: <https://www.gnu.org/gethelp/>.
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = "./makesim SPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\nsed: invalid option -- '1'\r\nUsage: sed [OPTION]... {script-only-if-no-other-script} [input-file]...\r\n\r\n  -n, --quiet, --silent\r\n                 suppress automatic printing of pattern space\r\n      --debug\r\n                 annotate program execution\r\n  -e script, --expression=script\r\n                 add the script to the commands to be executed\r\n  -f script-file, --file=script-file\r\n                 add the contents of script-file to the commands to be executed\r\n  --follow-symlinks\r\n                 follow symlinks when processing in place\r\n  -i[SUFFIX], --in-place[=SUFFIX]\r\n                 edit files in place (makes backup if SUFFIX supplied)\r\n  -l N, --line-length=N\r\n                 specify the desired line-wrap length for the `l' command\r\n  --posix\r\n                 disable all GNU extensions.\r\n  -E, -r, --regexp-extended\r\n                 use extended regular expressions in the script\r\n                 (for portability use POSIX -E).\r\n  -s, --separate\r\n                 consider files as separate rather than as a single,\r\n                 continuous long stream.\r\n      --sandbox\r\n                 operate in sandbox mode (disable e/r/w commands).\r\n  -u, --unbuffered\r\n                 load minimal amounts of data from the input files and flush\r\n                 the output buffers more often\r\n  -z, --null-data\r\n                 separate lines by NUL characters\r\n      --help     display this help and exit\r\n      --version  output version information and exit\r\n\r\nIf no -e, --expression, -f, or --file option is given, then the first\r\nnon-option argument is taken as the sed script to interpret.  All\r\nremaining arguments are names of input files; if no input files are\r\nspecified, then the standard input is read.\r\n\r\nGNU sed home page: <https://www.gnu.org/software/sed/>.\r\nGeneral help using GNU software: <https://www.gnu.org/gethelp/>.\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# "
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = 
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'ls -l\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: ls -l
+total 7320
+-rwxr-xr-x 1 root root      72 Mar 16 20:23 [0m[01;32mcleandir[0m
+-rwxr-xr-x 1 root root     158 Mar 16 20:25 [01;32mmakesim[0m
+-rw------- 1 root root 3742191 Mar 16 21:02 SPFDILUP91A-P-AL-7750-01-Scrubbed.log
+-rw------- 1 root root 3742065 Mar 16 21:02 SPFDILUP91A-P-AL-7750-01-Scrubbed.log.orig
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = 'ls -l\r\ntotal 7320\r\n-rwxr-xr-x 1 root root      72 Mar 16 20:23 \x1b[0m\x1b[01;32mcleandir\x1b[0m\r\n-rwxr-xr-x 1 root root     158 Mar 16 20:25 \x1b[01;32mmakesim\x1b[0m\r\n-rw------- 1 root root 3742191 Mar 16 21:02 SPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\n-rw------- 1 root root 3742065 Mar 16 21:02 SPFDILUP91A-P-AL-7750-01-Scrubbed.log.orig\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = ls -l
+total 7320
+-rwxr-xr-x 1 root root      72 Mar 16 20:23 [0mcleandir[0m
+-rwxr-xr-x 1 root root     158 Mar 16 20:25 makesim[0m
+-rw------- 1 root root 3742191 Mar 16 21:02 SPFDILUP91A-P-AL-7750-01-Scrubbed.log
+-rw------- 1 root root 3742065 Mar 16 21:02 SPFDILUP91A-P-AL-7750-01-Scrubbed.log.orig
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = 'ls -l\r\ntotal 7320\r\n-rwxr-xr-x 1 root root      72 Mar 16 20:23 \x1b[0mcleandir\x1b[0m\r\n-rwxr-xr-x 1 root root     158 Mar 16 20:25 makesim\x1b[0m\r\n-rw------- 1 root root 3742191 Mar 16 21:02 SPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\n-rw------- 1 root root 3742065 Mar 16 21:02 SPFDILUP91A-P-AL-7750-01-Scrubbed.log.orig\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = 'ls -l\r\ntotal 7320\r\n-rwxr-xr-x 1 root root      72 Mar 16 20:23 \x1b[0mcleandir\x1b[0m\r\n-rwxr-xr-x 1 root root     158 Mar 16 20:25 makesim\x1b[0m\r\n-rw------- 1 root root 3742191 Mar 16 21:02 SPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\n-rw------- 1 root root 3742065 Mar 16 21:02 SPFDILUP91A-P-AL-7750-01-Scrubbed.log.orig\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = ls -l
+total 7320
+-rwxr-xr-x 1 root root      72 Mar 16 20:23 [0mcleandir[0m
+-rwxr-xr-x 1 root root     158 Mar 16 20:25 makesim[0m
+-rw------- 1 root root 3742191 Mar 16 21:02 SPFDILUP91A-P-AL-7750-01-Scrubbed.log
+-rw------- 1 root root 3742065 Mar 16 21:02 SPFDILUP91A-P-AL-7750-01-Scrubbed.log.orig
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = 'ls -l\r\ntotal 7320\r\n-rwxr-xr-x 1 root root      72 Mar 16 20:23 \x1b[0mcleandir\x1b[0m\r\n-rwxr-xr-x 1 root root     158 Mar 16 20:25 makesim\x1b[0m\r\n-rw------- 1 root root 3742191 Mar 16 21:02 SPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\n-rw------- 1 root root 3742065 Mar 16 21:02 SPFDILUP91A-P-AL-7750-01-Scrubbed.log.orig\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:write_channel: b'exit\n'
+DEBUG:paramiko.transport:starting thread (client mode): 0xf7616d8
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.7.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-OpenSSH_8.0p1 Ubuntu-6build1
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_8.0p1)
+DEBUG:paramiko.transport:kex algos:['curve25519-sha256', 'curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group16-sha512', 'diffie-hellman-group18-sha512', 'diffie-hellman-group14-sha256', 'diffie-hellman-group14-sha1'] server key:['rsa-sha2-512', 'rsa-sha2-256', 'ssh-rsa', 'ecdsa-sha2-nistp256', 'ssh-ed25519'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: curve25519-sha256@libssh.org
+DEBUG:paramiko.transport:HostKey agreed: ssh-ed25519
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:kex engine KexCurve25519 specified hash_algo <built-in function openssl_sha256>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-ed25519 host key for 10.0.0.182: b'ffb19df005ec7aad77b1737a16a4a5b6'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:Received global request "hostkeys-00@openssh.com"
+DEBUG:paramiko.transport:Rejecting "hostkeys-00@openssh.com" global request from server.
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:read_channel: Welcome to Ubuntu 19.10 (GNU/Linux 5.3.0-40-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Mon 16 Mar 2020 09:03:44 PM UTC
+
+  System load:  0.04               Processes:            252
+  Usage of /:   35.4% of 19.56GB   Users logged in:      1
+  Memory usage: 10%                IP address for ens33: 10.0.0.182
+  Swap usage:   0%
+
+ * Latest Kubernetes 1.18 beta is now available for your laptop, NUC, cloud
+   instance or Raspberry Pi, with automatic updates to the final GA release.
+
+     sudo snap install microk8s --channel=1.18/beta --classic
+
+ * Multipass 1.1 adds proxy support for developers behind enterprise
+   firewalls. Rapid prototyping for cloud operations just got easier.
+
+     https://multipass.run/
+
+1 update can be installed immediately.
+0 of these updates are security updates.
+To see these additional updates run: apt list --upgradable
+
+
+Last login: Mon Mar 16 21:02:22 2020 from 10.0.0.129
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:~# '
+DEBUG:netmiko:new_output = 
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:~# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'cd /var/ftp/pub/vzw\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: cd /var/ftp/pub/vzw
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = 'cd /var/ftp/pub/vzw\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = cd /var/ftp/pub/vzw
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = 'cd /var/ftp/pub/vzw\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = 'cd /var/ftp/pub/vzw\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = cd /var/ftp/pub/vzw
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = 'cd /var/ftp/pub/vzw\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = 
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'./cleandir\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: ./cleandir
+/usr/bin/rm: cannot remove '*txt*': No such file or directory
+/usr/bin/rm: cannot remove '*log*': No such file or directory
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = "./cleandir\r\n/usr/bin/rm: cannot remove '*txt*': No such file or directory\r\n/usr/bin/rm: cannot remove '*log*': No such file or directory\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# "
+DEBUG:netmiko:new_output = ./cleandir
+/usr/bin/rm: cannot remove '*txt*': No such file or directory
+/usr/bin/rm: cannot remove '*log*': No such file or directory
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = "./cleandir\r\n/usr/bin/rm: cannot remove '*txt*': No such file or directory\r\n/usr/bin/rm: cannot remove '*log*': No such file or directory\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# "
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = "./cleandir\r\n/usr/bin/rm: cannot remove '*txt*': No such file or directory\r\n/usr/bin/rm: cannot remove '*log*': No such file or directory\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# "
+DEBUG:netmiko:new_output = ./cleandir
+/usr/bin/rm: cannot remove '*txt*': No such file or directory
+/usr/bin/rm: cannot remove '*log*': No such file or directory
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = "./cleandir\r\n/usr/bin/rm: cannot remove '*txt*': No such file or directory\r\n/usr/bin/rm: cannot remove '*log*': No such file or directory\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# "
+DEBUG:netmiko:write_channel: b'exit\n'
+DEBUG:paramiko.transport:EOF in transport thread
+DEBUG:paramiko.transport:starting thread (client mode): 0xf761a90
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.7.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-OpenSSH_8.0p1 Ubuntu-6build1
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_8.0p1)
+DEBUG:paramiko.transport:kex algos:['curve25519-sha256', 'curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group16-sha512', 'diffie-hellman-group18-sha512', 'diffie-hellman-group14-sha256', 'diffie-hellman-group14-sha1'] server key:['rsa-sha2-512', 'rsa-sha2-256', 'ssh-rsa', 'ecdsa-sha2-nistp256', 'ssh-ed25519'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: curve25519-sha256@libssh.org
+DEBUG:paramiko.transport:HostKey agreed: ssh-ed25519
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:kex engine KexCurve25519 specified hash_algo <built-in function openssl_sha256>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-ed25519 host key for 10.0.0.182: b'ffb19df005ec7aad77b1737a16a4a5b6'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:Received global request "hostkeys-00@openssh.com"
+DEBUG:paramiko.transport:Rejecting "hostkeys-00@openssh.com" global request from server.
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:read_channel: Welcome to Ubuntu 19.10 (GNU/Linux 5.3.0-40-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Mon 16 Mar 2020 09:03:49 PM UTC
+
+  System load:  0.04               Processes:            249
+  Usage of /:   35.4% of 19.56GB   Users logged in:      1
+  Memory usage: 10%                IP address for ens33: 10.0.0.182
+  Swap usage:   0%
+
+ * Latest Kubernetes 1.18 beta is now available for your laptop, NUC, cloud
+   instance or Raspberry Pi, with automatic updates to the final GA release.
+
+     sudo snap install microk8s --channel=1.18/beta --classic
+
+ * Multipass 1.1 adds proxy support for developers behind enterprise
+   firewalls. Rapid prototyping for cloud operations just got easier.
+
+     https://multipass.run/
+
+1 update can be installed immediately.
+0 of these updates are security updates.
+To see these additional updates run: apt list --upgradable
+
+
+Last login: Mon Mar 16 21:03:44 2020 from 10.0.0.129
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:~# '
+DEBUG:netmiko:new_output = 
+root@Ubuntu-Sandbox:~# 
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:~# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'cd /var/ftp/pub/vzw\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: cd /var/ftp/pub/vzw
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = 'cd /var/ftp/pub/vzw\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = cd /var/ftp/pub/vzw
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = 'cd /var/ftp/pub/vzw\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = 'cd /var/ftp/pub/vzw\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = cd /var/ftp/pub/vzw
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = 'cd /var/ftp/pub/vzw\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = 
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log
+/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log: cannot open `/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log' (No such file or directory)
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = "file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\n/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log: cannot open `/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log' (No such file or directory)\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# "
+DEBUG:netmiko:new_output = file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log
+/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log: cannot open `/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log' (No such file or directory)
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = "file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\n/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log: cannot open `/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log' (No such file or directory)\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# "
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = "file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\n/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log: cannot open `/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log' (No such file or directory)\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# "
+DEBUG:netmiko:new_output = file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log
+/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log: cannot open `/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log' (No such file or directory)
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = "file /var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\n/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log: cannot open `/var/ftp/pub/vzwSPFDILUP91A-P-AL-7750-01-Scrubbed.log' (No such file or directory)\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# "
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = 
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'./makesim SPFDILUP91A-P-AL-7750-01-Scrubbed.log\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: ./makesim SPFDILUP91A-P-AL-7750-01-Scrubbed.log
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = './makesim SPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = ./makesim SPFDILUP91A-P-AL-7750-01-Scrubbed.log
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = './makesim SPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = './makesim SPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = ./makesim SPFDILUP91A-P-AL-7750-01-Scrubbed.log
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = './makesim SPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = 
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = '\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'ls -l\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: ls -l
+total 7320
+-rwxr-xr-x 1 root root      72 Mar 16 20:23 [0m[01;32mcleandir[0m
+-rwxr-xr-x 1 root root     158 Mar 16 21:03 [01;32mmakesim[0m
+-rw------- 1 root root 3742191 Mar 16 21:03 SPFDILUP91A-P-AL-7750-01-Scrubbed.log
+-rw------- 1 root root 3742065 Mar 16 21:03 SPFDILUP91A-P-AL-7750-01-Scrubbed.log.orig
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = 'ls -l\r\ntotal 7320\r\n-rwxr-xr-x 1 root root      72 Mar 16 20:23 \x1b[0m\x1b[01;32mcleandir\x1b[0m\r\n-rwxr-xr-x 1 root root     158 Mar 16 21:03 \x1b[01;32mmakesim\x1b[0m\r\n-rw------- 1 root root 3742191 Mar 16 21:03 SPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\n-rw------- 1 root root 3742065 Mar 16 21:03 SPFDILUP91A-P-AL-7750-01-Scrubbed.log.orig\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = ls -l
+total 7320
+-rwxr-xr-x 1 root root      72 Mar 16 20:23 [0mcleandir[0m
+-rwxr-xr-x 1 root root     158 Mar 16 21:03 makesim[0m
+-rw------- 1 root root 3742191 Mar 16 21:03 SPFDILUP91A-P-AL-7750-01-Scrubbed.log
+-rw------- 1 root root 3742065 Mar 16 21:03 SPFDILUP91A-P-AL-7750-01-Scrubbed.log.orig
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = 'ls -l\r\ntotal 7320\r\n-rwxr-xr-x 1 root root      72 Mar 16 20:23 \x1b[0mcleandir\x1b[0m\r\n-rwxr-xr-x 1 root root     158 Mar 16 21:03 makesim\x1b[0m\r\n-rw------- 1 root root 3742191 Mar 16 21:03 SPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\n-rw------- 1 root root 3742065 Mar 16 21:03 SPFDILUP91A-P-AL-7750-01-Scrubbed.log.orig\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:In strip_ansi_escape_codes
+DEBUG:netmiko:repr = 'ls -l\r\ntotal 7320\r\n-rwxr-xr-x 1 root root      72 Mar 16 20:23 \x1b[0mcleandir\x1b[0m\r\n-rwxr-xr-x 1 root root     158 Mar 16 21:03 makesim\x1b[0m\r\n-rw------- 1 root root 3742191 Mar 16 21:03 SPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\n-rw------- 1 root root 3742065 Mar 16 21:03 SPFDILUP91A-P-AL-7750-01-Scrubbed.log.orig\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:new_output = ls -l
+total 7320
+-rwxr-xr-x 1 root root      72 Mar 16 20:23 [0mcleandir[0m
+-rwxr-xr-x 1 root root     158 Mar 16 21:03 makesim[0m
+-rw------- 1 root root 3742191 Mar 16 21:03 SPFDILUP91A-P-AL-7750-01-Scrubbed.log
+-rw------- 1 root root 3742065 Mar 16 21:03 SPFDILUP91A-P-AL-7750-01-Scrubbed.log.orig
+root@Ubuntu-Sandbox:/var/ftp/pub/vzw# 
+DEBUG:netmiko:repr = 'ls -l\r\ntotal 7320\r\n-rwxr-xr-x 1 root root      72 Mar 16 20:23 \x1b[0mcleandir\x1b[0m\r\n-rwxr-xr-x 1 root root     158 Mar 16 21:03 makesim\x1b[0m\r\n-rw------- 1 root root 3742191 Mar 16 21:03 SPFDILUP91A-P-AL-7750-01-Scrubbed.log\r\n-rw------- 1 root root 3742065 Mar 16 21:03 SPFDILUP91A-P-AL-7750-01-Scrubbed.log.orig\r\nroot@Ubuntu-Sandbox:/var/ftp/pub/vzw# '
+DEBUG:netmiko:write_channel: b'exit\n'

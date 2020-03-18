@@ -3,7 +3,7 @@
 '''
  Author: Hugo Tinoco :: hugo.tinoco.ext@nokia.com
  Beta Ver .04
- 
+
 '''
 
 import time
@@ -21,11 +21,11 @@ from ftplib import FTP
 # Pending items:
 #   Update crendentials for jumpserver
 
-# Fill out the following credentials for the Jump Server | Leave the qoutes. 
+# Fill out the following credentials for the Jump Server | Leave the qoutes.
 # Including the IP Address of the JumpServer.
 FTPuser = "root"
 FTPpasswd = "root"
-JumpServer = "10.0.0.182"   
+JumpServer = "10.0.0.182"
 # Host is the vSR you want to run this script against. Use the IP of the far-end vSR behind the JumpServer.
 host = "10.0.0.240"
 
@@ -197,7 +197,7 @@ def reg_text():
             print("Err.. regex failed to find system name - error occured earlier.")
 
 def prep_jumpserver():
-    
+
     # Running the local script ./cleandir which places any file in the dir into the Archive directory.
 
     jumpserver = {
@@ -208,7 +208,7 @@ def prep_jumpserver():
     }
 
     net_connect = Netmiko(**jumpserver)
-    
+
     print("Cleaning /vzw directory before FTP'ing new files.")
 
     # Change to the correct directory.
@@ -216,10 +216,10 @@ def prep_jumpserver():
 
     # Execute the script.
     cleandir = net_connect.send_command("./cleandir")
-    
+
     # Print the output.
-    print(cleandir) 
-    
+    print(cleandir)
+
     # Disconnect
     net_connect.disconnect()
 
@@ -232,8 +232,8 @@ def place_file():
 
     ftp.login(FTPuser,FTPpasswd)
 
-    # Change to the correct directory. 
-    ftp.cwd('/var/ftp/pub/vzw') 
+    # Change to the correct directory.
+    ftp.cwd('/var/ftp/pub/vzw')
 
     # Utilize glob to the find the file by extension. This is currently looking for the only file under (CURRENT_PATH +'/Scrubbed-Configs/Latest')
     for y in glob.glob("*.log"):
@@ -262,17 +262,17 @@ def prep_file():
     }
 
     net_connect = Netmiko(**jumpserver)
-    
+
     # Change to the correct directory.
     net_connect.send_command("cd /var/ftp/pub/vzw", expect_string=r'#')
 
     #print(net_connect.find_prompt())
-  
-    ## Checking BOM and remove if found, otherwise move on. 
-    print("Checking BOM..") 
+
+    ## Checking BOM and remove if found, otherwise move on.
+    print("Checking BOM..")
 
     # if statement = if BOM detected, run the clean | set no bomb command.  Otherwise, continue.
-    chkBom = net_connect.send_command('file /var/ftp/pub/vzw'+ ftp_file) 
+    chkBom = net_connect.send_command('file /var/ftp/pub/vzw'+ ftp_file)
     if 'BOM' in chkBom:
         print ("Disabling BOMB")
         net_connect.send_command("vim --clean -c 'se nobomb|wq' /srv/ftp/"+ ftp_file)
@@ -280,7 +280,7 @@ def prep_file():
         print("No BOMB Detonating needed today.")
 
     # Run the local makesim script against the newly updated file.
-    makesim = net_connect.send_command('./makesim '+ ftp_file) 
+    makesim = net_connect.send_command('./makesim '+ ftp_file)
     print (makesim)
 
     # Print contents of PWD to screen.
@@ -294,7 +294,7 @@ def proxy_vsr():
 
     jumpserver = {
         "host": "10.0.0.241", # Far-end vSR behind JumpServer
-        "username": "admin", 
+        "username": "admin",
         "password": "admin",
         "device_type": "alcatel_sros",
         "ssh_config_file": "~/.ssh/config", # location of the ssh config on the local machine running this script, in order to use jumpserver as proxy.
@@ -306,7 +306,7 @@ def proxy_vsr():
     system_type = net_connect.send_command('show system information | match "System Type"')
     print("Executing Commands on vSR: "+ system_type)
 
-  
+
     net_connect.disconnect()
 
 def main():

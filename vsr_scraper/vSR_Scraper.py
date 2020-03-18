@@ -2,7 +2,11 @@
 
 '''
  Author: Hugo Tinoco :: hugo.tinoco.ext@nokia.com
- Beta Ver .04
+ Beta Ver 0.5
+ Date: 3/18/2020
+ Changes:
+ Intended Use: Capture a log file from MLS Router. Process the file and load configuration
+ on vSR SIM in order to test and validate MOP and CLI changes to the running config.
 
 '''
 
@@ -15,7 +19,6 @@ import sys
 import os
 import logging
 from netmiko import Netmiko
-from getpass import getpass
 from ftplib import FTP
 
 # Pending items:
@@ -27,7 +30,7 @@ FTPuser = "root"
 FTPpasswd = "root"
 JumpServer = "10.0.0.182"
 # Host is the vSR you want to run this script against. Use the IP of the far-end vSR behind the JumpServer.
-host = "10.0.0.240"
+Vsrhost = "10.0.0.241"
 
 
 # Regex patterns utilized to scrub the configuration files
@@ -198,7 +201,7 @@ def reg_text():
 
 def prep_jumpserver():
 
-    # Running the local script ./cleandir which places any file in the dir into the Archive directory.
+    # Running the local script ./cleandir. Cleans the directory by removing the un-used old files left behind.
 
     jumpserver = {
         "host": JumpServer,
@@ -215,10 +218,7 @@ def prep_jumpserver():
     net_connect.send_command("cd /var/ftp/pub/vzw", expect_string=r'#')
 
     # Execute the script.
-    cleandir = net_connect.send_command("./cleandir")
-
-    # Print the output.
-    print(cleandir)
+    net_connect.send_command("./cleandir")
 
     # Disconnect
     net_connect.disconnect()
@@ -283,9 +283,15 @@ def prep_file():
     makesim = net_connect.send_command('./makesim '+ ftp_file)
     print (makesim)
 
+    # Ensure full rwx on file for vSR to execute without issues.
+    chmod_file = net_connect.send_command('chmod 777 '+ ftp_file)
+
     # Print contents of PWD to screen.
     output = net_connect.send_command('ls -l')
-    print(output)
+    if ftp_file in output:
+        print("File is ready to go.")
+    else:
+        print("Can't find "+ ftp_file)
 
     # Goodbye
     net_connect.disconnect()
@@ -293,7 +299,7 @@ def prep_file():
 def proxy_vsr():
 
     jumpserver = {
-        "host": "10.0.0.241", # Far-end vSR behind JumpServer
+        "host": Vsrhost, # Far-end vSR behind JumpServer
         "username": "admin",
         "password": "admin",
         "device_type": "alcatel_sros",
@@ -302,10 +308,23 @@ def proxy_vsr():
 
     net_connect = Netmiko(**jumpserver)
 
-    print(net_connect.find_prompt())
+    #print(net_connect.find_prompt())
+
+    # Display the Chassis type to screen.
     system_type = net_connect.send_command('show system information | match "System Type"')
     print("Executing Commands on vSR: "+ system_type)
+    print(ftp_file)
+    syntax = net_connect.send_command('exec -syntax '+ 'ftp://'+JumpServer+'/'+ftp_file)
+    if 'Verified' in syntax:
+        print("Syntax Check Verified. Executing configuration.")
+    else:
+        print(syntax)
 
+    syntax = net_connect.send_command('exec '+ 'ftp://'+JumpServer+'/'+ftp_file, expect_string=r'#')
+    if 'failed' in syntax:
+        print(":: Failed ::: "+ syntax)
+    else:
+        print(syntax)
 
     net_connect.disconnect()
 
@@ -314,7 +333,7 @@ def main():
     dir_setup()
     line_text()
     reg_text()
-    prep_jumpserver()
+    #prep_jumpserver()
     place_file()
     prep_file()
     proxy_vsr()

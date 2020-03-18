@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 
-##################################################################
-# Author: Hugo Tinoco :: hugo.tinoco.ext@nokia.com
-# Beta Ver .04
-# 
-##################################################################
+'''
+ Author: Hugo Tinoco :: hugo.tinoco.ext@nokia.com
+ Beta Ver .04
+ 
+'''
 
 import time
 import re
@@ -26,7 +26,8 @@ from ftplib import FTP
 FTPuser = "root"
 FTPpasswd = "root"
 JumpServer = "10.0.0.182"   
-TestVsr = "10.0.0.240"
+# Host is the vSR you want to run this script against. Use the IP of the far-end vSR behind the JumpServer.
+host = "10.0.0.240"
 
 
 # Regex patterns utilized to scrub the configuration files
@@ -289,6 +290,24 @@ def prep_file():
     # Goodbye
     net_connect.disconnect()
 
+def proxy_vsr():
+
+    jumpserver = {
+        "host": "10.0.0.241", # Far-end vSR behind JumpServer
+        "username": "admin", 
+        "password": "admin",
+        "device_type": "alcatel_sros",
+        "ssh_config_file": "~/.ssh/config", # location of the ssh config on the local machine running this script, in order to use jumpserver as proxy.
+    }
+
+    net_connect = Netmiko(**jumpserver)
+
+    print(net_connect.find_prompt())
+    system_type = net_connect.send_command('show system information | match "System Type"')
+    print("Executing Commands on vSR: "+ system_type)
+
+  
+    net_connect.disconnect()
 
 def main():
     clean_slate()
@@ -298,5 +317,6 @@ def main():
     prep_jumpserver()
     place_file()
     prep_file()
+    proxy_vsr()
 
 if __name__ == "__main__": main()

@@ -6,13 +6,13 @@ This tool follows the vSIM Lab Info Document " To Load MLS and/or HUB Config fro
 
 There are a few variables which will need to be adjusted by locally editing the vSR_Scraper.py file, which include the following:
 
-# FTPuser - > 
+FTPuser:
 This is the username for the JumpServer, found on the SIM_Lab_Info document.
-# FTPpasswd - > 
+FTPpasswd: 
 This is the password for the JumpServer, found on the SIM_Lab_Info document.
-# JumpServer - > 
+JumpServer:
 This is the IP of the JumpServer.
-# Vsrhost -> 
+Vsrhost:
 This is the IP address of the vSR SIM Lab Node you want to load the MLS Config on. It will most likely be one of the SR-12's or SR-1's for the HUB's. 
 
 

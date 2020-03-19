@@ -18,6 +18,8 @@ This program requires the user to be running a WSL(Windows Subsystem Linux) inst
 
 Install GIT, Python3, PIP and Netmiko.
 
+(Please refer to the wiki page on instructions on how to get started)
+
 Once these requirements are met, clone the project to your C:/ drive. When the program is run for the first time, it will auto-generate a directory structure that will be utilized throught the life of the tool. 
 
 Things to note: 

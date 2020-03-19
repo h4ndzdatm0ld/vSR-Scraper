@@ -5,7 +5,7 @@
  Beta Ver 0.5
  Date: 3/18/2020
  Changes:
- Intended Use: Capture a log file from MLS Router. Process the file and load configuration
+ Intended Use: Capture a log file from MLS or HUB Router. Process the file and load configuration
  on vSR SIM in order to test and validate MOP and CLI changes to the running config.
 
 '''
@@ -21,16 +21,14 @@ import logging
 from netmiko import Netmiko
 from ftplib import FTP
 
-# Pending items:
-#   Update crendentials for jumpserver
-
 # Fill out the following credentials for the Jump Server | Leave the qoutes.
-# Including the IP Address of the JumpServer.
-FTPuser = "root"
-FTPpasswd = "root"
+
 JumpServer = "10.0.0.182"
+JS_User = "root"
+JS_Pass = "root"
+
 # Host is the vSR you want to run this script against. Use the IP of the far-end vSR behind the JumpServer.
-Vsrhost = "10.0.0.241"
+vsr = "10.0.0.241"
 
 
 # Regex patterns utilized to scrub the configuration files
@@ -56,7 +54,7 @@ CURRENT_PATH = os.getcwd()
 
 # The log file must be pulled from the SecureCRT session using
 # File > Log Session -- If the 'raw log' is used, the text spacing
-# will be off and errors will occur.
+# will be off and errors will occur(Regex is very specific).
 
 # Display all .log files in the current working directory.
 # If there are more than two .log files, the program will not run.
@@ -205,8 +203,8 @@ def prep_jumpserver():
 
     jumpserver = {
         "host": JumpServer,
-        "username": "root",
-        "password": "root",
+        "username": JS_User,
+        "password": JS_Pass,
         "device_type": "linux",
     }
 
@@ -230,7 +228,7 @@ def place_file():
     ftp = FTP(JumpServer)
     #print ("Welcome: ", ftp.getwelcome())
 
-    ftp.login(FTPuser,FTPpasswd)
+    ftp.login(JS_User,JS_Pass)
 
     # Change to the correct directory.
     ftp.cwd('/var/ftp/pub/vzw')
@@ -256,17 +254,16 @@ def prep_file():
 
     jumpserver = {
         "host": JumpServer,
-        "username": "root",
-        "password": "root",
+        "username": JS_User,
+        "password": JS_Pass,
         "device_type": "linux",
     }
 
     net_connect = Netmiko(**jumpserver)
 
     # Change to the correct directory.
+    # Expect strin necessary to avoid interruptions with linux host.
     net_connect.send_command("cd /var/ftp/pub/vzw", expect_string=r'#')
-
-    #print(net_connect.find_prompt())
 
     ## Checking BOM and remove if found, otherwise move on.
     print("Checking BOM..")
@@ -297,23 +294,23 @@ def prep_file():
     net_connect.disconnect()
 
 def proxy_vsr():
+    #key_file = "/home/htinoco/.ssh/id_rsa"
 
-    jumpserver = {
-        "host": Vsrhost, # Far-end vSR behind JumpServer
-        "username": "admin",
-        "password": "admin",
+    vsr_host = {
+        "host": vsr, # Far-end vSR behind JumpServer
+        "username": "admin", # Username to the vSR should never change.
+        "password": "admin", # Password to the vSR should never change.
         "device_type": "alcatel_sros",
         "ssh_config_file": "~/.ssh/config", # location of the ssh config on the local machine running this script, in order to use jumpserver as proxy.
     }
 
-    net_connect = Netmiko(**jumpserver)
-
-    #print(net_connect.find_prompt())
+    net_connect = Netmiko(**vsr_host)
 
     # Display the Chassis type to screen.
     system_type = net_connect.send_command('show system information | match "System Type"')
-    print("Executing Commands on vSR: "+ system_type)
-    print(ftp_file)
+    execute = f"Executing Commands on vSR: {system_type} Using the file: {ftp_file}"
+    print (execute)
+
     syntax = net_connect.send_command('exec -syntax '+ 'ftp://'+JumpServer+'/'+ftp_file)
     if 'Verified' in syntax:
         print("Syntax Check Verified. Executing configuration.")

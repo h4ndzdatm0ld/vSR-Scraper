@@ -16,7 +16,9 @@ vsr
 # Requirements
 This program requires the user to be running a WSL(Windows Subsystem Linux) instance on the machine. This has only been tested on a Ubuntu Instance.
 
-Install GIT, Python3, PIP and Netmiko.
+A customer ssh config file will need to be manually created. A template for this will is found under the wiki page. along with detailed instructions on how to install the following:
+
+GIT, Python3, PIP and Netmiko.
 
 (Please refer to the wiki page on instructions on how to get started)
 

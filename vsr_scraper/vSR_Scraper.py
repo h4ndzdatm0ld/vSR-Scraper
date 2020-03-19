@@ -23,12 +23,12 @@ from ftplib import FTP
 
 # Fill out the following credentials for the Jump Server | Leave the qoutes.
 
-JumpServer = "10.0.0.182"
+JumpServer = "changeme"
 JS_User = "root"
-JS_Pass = "root"
+JS_Pass = "changeme"
 
 # Host is the vSR you want to run this script against. Use the IP of the far-end vSR behind the JumpServer.
-vsr = "10.0.0.241"
+vsr = "192.168.0.22"
 
 
 # Regex patterns utilized to scrub the configuration files
@@ -226,12 +226,14 @@ def place_file():
 
     #os.chdir(CURRENT_PATH +'/Scrubbed-Configs/Latest')
     ftp = FTP(JumpServer)
-    #print ("Welcome: ", ftp.getwelcome())
+    print ("Welcome: ", ftp.getwelcome())
 
-    ftp.login(JS_User,JS_Pass)
+    ftp.login("ftp","ftp")
 
     # Change to the correct directory.
-    ftp.cwd('/var/ftp/pub/vzw')
+    ftp.cwd('/pub/vzw')
+
+    # dirlist = ftp.retrlines('LIST')
 
     # Utilize glob to the find the file by extension. This is currently looking for the only file under (CURRENT_PATH +'/Scrubbed-Configs/Latest')
     for y in glob.glob("*.log"):
@@ -294,7 +296,6 @@ def prep_file():
     net_connect.disconnect()
 
 def proxy_vsr():
-    #key_file = "/home/htinoco/.ssh/id_rsa"
 
     vsr_host = {
         "host": vsr, # Far-end vSR behind JumpServer
@@ -311,13 +312,13 @@ def proxy_vsr():
     execute = f"Executing Commands on vSR: {system_type} Using the file: {ftp_file}"
     print (execute)
 
-    syntax = net_connect.send_command('exec -syntax '+ 'ftp://'+JumpServer+'/'+ftp_file)
+    syntax = net_connect.send_command('exec -syntax '+ 'ftp://ftp:ftp@'+JumpServer+'/pub/vzw/'+ftp_file)
     if 'Verified' in syntax:
         print("Syntax Check Verified. Executing configuration.")
     else:
         print(syntax)
 
-    syntax = net_connect.send_command('exec '+ 'ftp://'+JumpServer+'/'+ftp_file, expect_string=r'#')
+    syntax = net_connect.send_command('exec '+ 'ftp://ftp:ftp@'+JumpServer+'/pub/vzw/'+ftp_file, expect_string=r'#')
     if 'failed' in syntax:
         print(":: Failed ::: "+ syntax)
     else:

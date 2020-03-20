@@ -25,8 +25,6 @@ This tool will auto-backup the original file placed into the directory before it
 
 # Instructions on how to get started.
 
-Log into the MLS or HUB Router and capture the output of 'admin display-config' and save it as a .log file.
-
 Go to the "Wiki" tab at the top of this page which will walk you through installation.
 Proceed going through the wiki in the following order:
 
